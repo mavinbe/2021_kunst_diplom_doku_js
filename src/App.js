@@ -6,6 +6,8 @@ import {
   Link
 } from "react-router-dom";
 
+import {Player} from './component/api.video/Player'
+
 export default function App() {
   return (
       <Router>
@@ -43,7 +45,7 @@ export default function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return <Player/>;
 }
 
 function About() {
