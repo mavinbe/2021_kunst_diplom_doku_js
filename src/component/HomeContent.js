@@ -7,7 +7,7 @@ export class HomeContent extends React.Component {
         function getCol(gif_path) {
             return (
                 <Col sm={4} xs={6}>
-                    <img src={"/media/"+gif_path}/>
+                    <img src={`${process.env.PUBLIC_URL}/media/`+gif_path}/>
                 </Col>
             );
         }
