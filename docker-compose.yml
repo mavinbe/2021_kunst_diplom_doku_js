@@ -1,0 +1,38 @@
+version: '3'
+services:
+#  nodejs-server:
+#    build:
+#      context: ./api
+#    ports:
+#      - "3080:3080"
+#    container_name: node-api
+#    volumes:
+#      - ./api:/usr/src/app/api
+#      - /usr/src/app/api/node_modules
+  kunst_diplom_doku_js:
+    image: kunst_diplom_doku_js
+    build:
+      context: ./
+      dockerfile: ./docker/react/Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend
+    container_name: kunst_diplom_doku_js
+    volumes:
+      - ./src:/usr/src/app/my-app/src
+      - ./public:/usr/src/app/my-app/public
+#      - /usr/src/app/my-app/node_modules
+
+  proxy_server:
+    image: proxy_server
+    build:
+      context: ./docker/nginx
+    ports:
+      - "3001:80"
+    networks:
+      - frontend
+    container_name: proxy_server
+
+networks:
+  frontend:
