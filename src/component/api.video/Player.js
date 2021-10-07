@@ -4,27 +4,12 @@ import Iframe from 'react-iframe'
 import './Player.css';
 
 export class Player extends React.Component {
-
     render() {
-        window.onload = function() {
-            // attach the sdk to the existing player
-            window.player = new PlayerSdk("iframe");
-            window.player.play();
-            // window.player can now be used to control the player as described above
-        };
         return (
-            <div className="shopping-list">
-                <h1>Shopping List for {this.props.name}</h1>
-                <div className="video-wrapper">
-                    <Iframe src="//embed.api.video/vod/vi54sj9dAakOHJXKrUycCQZp" width="100%" height="100%" frameBorder="0"
-                            allowFullScreen allow="autoplay"></Iframe>
-                </div>
-
-                <ul>
-                    <li>Instagram</li>
-                    <li>WhatsApp</li>
-                    <li>Oculus</li>
-                </ul>
+            <div className="video-wrapper">
+                <img alt="bla" height="100px" style={{position: 'absolute', right: '20px'}} src="https://cdn.api.video/vod/vi18U76WKv7HUCTynVPnR2xJ/thumbnail.jpg"/>
+                <Iframe onload="asd" src="https://embed.api.video/vod/vi54sj9dAakOHJXKrUycCQZp" width="100%" height="100%" frameBorder="0"
+                        allow="autoplay; fullscreen" allowfullscreen/>
             </div>
         );
     }
