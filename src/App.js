@@ -8,13 +8,12 @@ import {
 import './App.css';
 
 import {Player} from './component/api.video/Player'
+import {HomeContent} from './component/HomeContent'
 
 export default function App() {
   return (
       <Router>
-        <div>
-
-
+        <div className="content">
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
@@ -28,7 +27,9 @@ export default function App() {
               <Home />
             </Route>
           </Switch>
+        </div>
 
+        <div className="navi">
           <nav>
             <ul>
               <li>
@@ -48,11 +49,11 @@ export default function App() {
 }
 
 function Home() {
-  return <Player/>;
+  return <HomeContent />;
 }
 
 function About() {
-  return <h2>About</h2>;
+  return <Player/>;
 }
 
 function Users() {

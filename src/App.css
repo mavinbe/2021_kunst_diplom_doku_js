@@ -1,8 +1,19 @@
-nav {
-  position: fixed;
+.content {
+  position: absolute;
+  top: 1px;
+  left: 0px;
+}
+.navi {
+  display: block;
+  position: absolute;
   background: white;
-  padding: 20px;
-
+  border: thin black solid;
+  padding: 0px;
+  top: 20px;
+  right: 20px;
+}
+nav ul{
+  padding: 0 10px;
 }
 nav ul li {
   display: inline;

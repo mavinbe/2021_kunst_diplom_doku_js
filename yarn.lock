@@ -9070,6 +9070,13 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
 
+react-grid-system@^7.3.1:
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/react-grid-system/-/react-grid-system-7.3.1.tgz#034ad701ec894ba7a7eb0a4bd715d83be08c598b"
+  integrity sha512-q5dTeKURLZ2lAFLTjMKdjgubhibIu+EvdT838bcki/rQ8ftJGm+afzZHT2Da6BASWYpXo9+OSIS9M7VFp4/gbQ==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-iframe@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/react-iframe/-/react-iframe-1.8.0.tgz#8c78f2c59b894ca5605fa7e45e61e27e57e96091"
