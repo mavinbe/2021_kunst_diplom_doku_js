@@ -24,3 +24,7 @@ yarn-error.log*
 
 # IDE
 .idea
+
+
+# ignore big media files
+/public/media/src
