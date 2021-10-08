@@ -1,6 +1,17 @@
+@font-face {
+  font-family: 'Mavinbeh';
+  src: local('Rajdhani'), url('fonts/Mavinbeh-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'agave';
+  src: local('agave'), url('fonts/agave_regular_Nerd_Font_Complete.ttf') format('truetype');
+}
+
+
 body {
   margin: 0;
-  font-family: 'Menlo',
+  font-size: 200%;
+  font-family: 'Mavinbeh',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
