@@ -6,8 +6,9 @@ export class HomeContent extends React.Component {
     render() {
         function getCol(gif_path) {
             return (
-                <Col sm={4} xs={6}>
-                    <img src={`${process.env.PUBLIC_URL}/media/`+gif_path}/>
+                <Col md={12} sm={12} xs={12}>
+                    <a href="#" className="tiles" style={{backgroundImage: `url("${process.env.PUBLIC_URL}/media/gifs/${gif_path}")`}}>&nbsp;</a>
+
                 </Col>
             );
         }
@@ -15,6 +16,7 @@ export class HomeContent extends React.Component {
         return (
             <Container>
                 <Row>
+                    {getCol('2016_03_30_IMG_2353_print_v2.gif')}
                     {getCol('1 2 Screen A.gif')}
                     {getCol('GOPR3912.gif')}
                     {getCol('IMG_3131.gif')}

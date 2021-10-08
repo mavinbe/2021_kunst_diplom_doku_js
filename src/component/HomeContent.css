@@ -1,7 +1,9 @@
-.video-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.tiles {
+    display: block;
+    width: 260px;
+    height: 162px;
+    background-size: contain;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+    text-decoration: none;
 }
