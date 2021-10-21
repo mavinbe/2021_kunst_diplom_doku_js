@@ -10,6 +10,10 @@ import './App.css';
 import {Player} from './component/api.video/Player'
 import {HomeContent} from './component/HomeContent'
 
+
+import {works_config} from './description/works';
+
+
 export default function App() {
   return (
       <Router>
@@ -17,6 +21,11 @@ export default function App() {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
+            {works_config.map((entry, i) => (
+                <Route key={i} path={`/works/${entry.slag}`}>
+                  <Player />
+                </Route>
+            ))}
             <Route path="/about">
               <About />
             </Route>
