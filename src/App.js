@@ -23,7 +23,7 @@ export default function App() {
           <Switch>
             {works_config.map((entry, i) => (
                 <Route key={i} path={`/works/${entry.slag}`}>
-                  <Player />
+                  <Player api_video_code={entry.api_video_code}  />
                 </Route>
             ))}
             <Route path="/about">
@@ -62,7 +62,7 @@ function Home() {
 }
 
 function About() {
-  return <Player/>;
+  return <h2>About</h2>;
 }
 
 function Users() {
