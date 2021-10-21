@@ -7,14 +7,14 @@ export const works_config = [
     //"api_video_code": "2016_03_30_IMG_2353_print_v2.jpg"
   },
   {
-    "slag": "radmaschine_version_spielen",
-    "name": "radmaschine version spielen",
+    "slag": "radmaschine_spielen",
+    "name": "radmaschine spielen",
     "thumbnail": "1 2 Screen A.gif",
     "type": "video",
   },
   {
-    "slag": "radmaschine_version_gips",
-    "name": "radmaschine version gips",
+    "slag": "radmaschine_gips",
+    "name": "radmaschine gips",
     "thumbnail": "GOPR3912.gif",
     "type": "video",
   },
