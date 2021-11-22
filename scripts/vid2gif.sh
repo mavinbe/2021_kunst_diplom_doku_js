@@ -9,6 +9,7 @@
 usage() {
 echo "Usage: $(basename ${0}) [arguments] inputfile" 1>&2
 echo "  -f  fps, defaults to 15" 1>&2
+echo "  -s  speed, as 1/<value>" 1>&2
 echo "  -w  width, defaults to 480" 1>&2
 echo "  -d  dither level, value between 0 and 5, defaults to 5" 1>&2
 echo "                    0 is no dithering and large file" 1>&2
@@ -18,12 +19,14 @@ exit 1
 }
 # Default variables
 fps=15
+speed="1.0"
 width=480
 dither=5
 # getopts to process the command line arguments
-while getopts ":f:w:d:" opt; do
+while getopts ":f:s:w:d:" opt; do
 case "${opt}" in
         f) fps=${OPTARG};;
+        s) speed=${OPTARG};;
         w) width=${OPTARG};;
         d) dither=${OPTARG};;
 *) usage;;
@@ -45,6 +48,7 @@ filename="${filename%.*}.gif"
 echo "Input: ${1}"
 echo "Output: ${filename}"
 echo "FPS: ${fps}"
+echo "Speed: ${speed}"
 echo "Width: ${width}"
 echo "Dither Level: ${dither}"
 # temporary file to store the first pass pallete
@@ -56,7 +60,7 @@ echo -ne "\nffmpeg 1st pass... "
 ffmpeg -v warning -i "${input}" -vf "${filters},palettegen=stats_mode=diff" -y "${palette}" && echo "done"
 # ffmpeg second pass
 echo -ne "ffmpeg 2nd pass... "
-ffmpeg -v warning -i "${input}" -i "${palette}" -lavfi "${filters} [x]; [x][1:v] paletteuse=dither=bayer:bayer_scale=${dither}" -y "${filename}" && echo "done"
+ffmpeg -v warning -i "${input}" -i "${palette}" -lavfi "setpts=${speed}*PTS,${filters} [x]; [x][1:v] paletteuse=dither=bayer:bayer_scale=${dither}" -y "${filename}" && echo "done"
 # display output file size
 filesize=$(du -h "${filename}" | cut -f1)
 echo -e "\nOutput File Name: ${filename}"
