@@ -47,14 +47,14 @@ export const works_config = [
     "name": "look what i've found",
     "thumbnail": "look what i\\'ve found.gif",
     "type": "video",
-    //"api_video_code": "vi4VXYZ1251bqbXs2cBfO9kw",
+    "api_video_code": "vi3Lm9bCwSZP7KxffJXClIEA",
   },
   {
     "slag": "no_show",
     "name": "no show",
     "thumbnail": "abc2_cuted_no_works.gif",
     "type": "video",
-    //"api_video_code": "vi4VXYZ1251bqbXs2cBfO9kw",
+    "api_video_code": "vi6jMww72lRPO9CvvOIemYpR",
   },
   {
     "slag": "trek",
@@ -66,8 +66,9 @@ export const works_config = [
   {
     "slag": "four_rooms",
     "name": "four rooms",
-    "thumbnail": "video.gif",
-    "type": "dummy",
+    "thumbnail": "four_rooms_07.gif",
+    "type": "video",
+    "api_video_code": "vi1IMlsz8rkLHA2QdH0MCTue",
   }
 ]
 
