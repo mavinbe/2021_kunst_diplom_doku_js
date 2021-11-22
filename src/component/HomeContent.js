@@ -9,7 +9,7 @@ export class HomeContent extends React.Component {
     rendered_tiles = works_config.map((body, key) =>
         <Col key={key}  md={12} sm={12} xs={12} >
             <div className="tile">
-                {body.name}
+                <span>{body.name}</span>
                 <a href={`/works/${body.slag}`} className="tile-link" style={{backgroundImage: `url("/media/gifs/${body.thumbnail}")`}}>&nbsp;</a>
             </div>
         </Col>
