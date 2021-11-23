@@ -12,9 +12,11 @@ import {HomeContent} from './component/HomeContent'
 
 
 import {works_config} from './description/works';
+import useWindowDimensions from "./helpers/WindowDimensions";
 
 
 export default function App() {
+  const { height, width } = useWindowDimensions();
   return (
       <Router>
         <div className="content">
@@ -23,7 +25,7 @@ export default function App() {
           <Switch>
             {works_config.map((entry, i) => (
                 <Route key={i} path={`/works/${entry.slag}`}>
-                  <Player api_video_code={entry.api_video_code}  />
+                  <Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
                 </Route>
             ))}
             <Route path="/about">

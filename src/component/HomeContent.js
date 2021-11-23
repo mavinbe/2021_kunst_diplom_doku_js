@@ -2,7 +2,7 @@ import React from "react";
 import './HomeContent.css';
 import { Container, Row, Col } from 'react-grid-system';
 import {works_config} from '../description/works';
-
+import useWindowDimensions from  '../helpers/WindowDimensions';
 
 
 export class HomeContent extends React.Component {

@@ -6,8 +6,9 @@ export class Player extends React.Component {
     render() {
         return (
             <div className="video-wrapper">
-                <img alt="bla" height="100px" style={{position: 'absolute', right: '20px'}} src={`https://cdn.api.video/vod/${this.props.api_video_code}/thumbnail.jpg`}/>
-                <Iframe src={`https://embed.api.video/vod/${this.props.api_video_code}`} width="100%" height="100%" frameBorder="0"
+                {this.props.windowWidth} x {this.props.windowHeight}
+                {/*<img alt={`${this.props.name}`} height="100px" style={{position: 'absolute', right: '0px'}} src={`https://cdn.api.video/vod/${this.props.api_video_code}/thumbnail.jpg`}/>*/}
+                <Iframe src={`https://embed.api.video/vod/${this.props.api_video_code}`} width={this.props.windowWidth} height={this.props.windowHeight} frameBorder="0"
                         allow="autoplay; fullscreen" allowfullscreen/>
             </div>
         );
