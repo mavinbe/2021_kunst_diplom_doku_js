@@ -8,6 +8,7 @@ import {
 import './App.css';
 
 import {Player} from './component/api.video/Player'
+import {VideoJsPlayer} from "./component/api.video/VideoJsPlayer";
 import {HomeContent} from './component/HomeContent'
 
 
@@ -25,7 +26,9 @@ export default function App() {
           <Switch>
             {works_config.map((entry, i) => (
                 <Route key={i} path={`/works/${entry.slag}`}>
-                  <Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
+                  {/*<Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
+                  */}
+                  <VideoJsPlayer/>
                 </Route>
             ))}
             <Route path="/about">
