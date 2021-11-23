@@ -6,14 +6,44 @@ import {works_config} from '../description/works';
 
 
 export class HomeContent extends React.Component {
-    rendered_tiles = works_config.map((body, key) =>
-        <Col key={key}  md={12} sm={12} xs={12} >
-            <div className="tile">
-                <span>{body.name}</span>
-                <a href={`/works/${body.slag}`} className="tile-link" style={{backgroundImage: `url("/media/gifs/${body.thumbnail}")`}}>&nbsp;</a>
-            </div>
-        </Col>
-    );
+
+    constructor(props) {
+        super(props);
+
+        // groups entries by year
+        let works_config_grouped_by_years = works_config.reduce(function (accu, current) {
+            if(!(current.year in accu)){
+                accu[current.year] = [];
+            }
+            accu[current.year].push(current);
+            return accu;
+        },{});
+
+        this.year_sections = Object.keys(works_config_grouped_by_years).map(function(key) {
+            let current_year_group = works_config_grouped_by_years[key];
+
+            let rendered_tiles = current_year_group.map((body, index) =>
+                <Col key={key+index}  md={12} sm={12} xs={12} >
+                    <div className="tile">
+                        <span className="title">{body.name}</span>
+                        <a href={`/works/${body.slag}`} className="tile-link" style={{backgroundImage: `url("/media/gifs/${body.thumbnail}")`}}>&nbsp;</a>
+                    </div>
+                </Col>
+            );
+
+            return [(
+                <Col key={key}  md={12} sm={12} xs={12} >
+                    <div className="year">
+                        {key}
+                    </div>
+                </Col>
+            ),rendered_tiles] ;
+        });
+
+
+        console.log(this.year_sections)
+
+    }
 
     render() {
 
@@ -21,7 +51,7 @@ export class HomeContent extends React.Component {
         return (
             <Container>
                 <Row>
-                    {this.rendered_tiles}
+                    {this.year_sections}
                 </Row>
             </Container>
         );
