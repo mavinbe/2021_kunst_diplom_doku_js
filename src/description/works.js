@@ -4,8 +4,9 @@ export const works_config = [
     "name": "o.T.(noise)",
     "thumbnail": "2016_03_30_IMG_2353_print_v2.gif",
     "type": "img",
-    "soruce": ""
+    "soruce": "",
     //"api_video_code": "vi54sj9dAakOHJXKrUycCQZp"
+    "year": 2016,
   },
   {
     "slag": "radmaschine_spielen",
@@ -13,6 +14,7 @@ export const works_config = [
     "thumbnail": "1 2 Screen A.gif",
     "type": "video",
     "api_video_code": "vi4VXYZ1251bqbXs2cBfO9kw",
+    "year": 2016,
   },
   {
     "slag": "radmaschine_gips",
@@ -20,13 +22,15 @@ export const works_config = [
     "thumbnail": "GOPR3912.gif",
     "type": "video",
     "api_video_code": "vi50cKnSPP9IcCF7zNUWrSY8",
+    "year": 2017,
   },
   {
     "slag": "radmaschine_version_dark_horses",
     "name": "radmaschine version \"dark horses\"",
     "thumbnail": "IMG_3131.gif",
     "type": "video",
-    "api_video_code": "vi1QIGl5cH5QiU39HC8ABytX"
+    "api_video_code": "vi1QIGl5cH5QiU39HC8ABytX",
+    "year": 2017,
   },
   {
     "slag": "post_hopo_1",
@@ -34,13 +38,15 @@ export const works_config = [
     "thumbnail": "Starren Dummy.gif",
     "type": "video",
     "api_video_code": "vi3k9USDY7HtOTWmmB6AeGZz",
+    "year": 2018,
   },
   {
     "slag": "gleich_gehts_weiter_post_hopo_2)",
     "name": "gleich gehts weiter - post-hopo 2",
     "thumbnail": "Follow_G_small.gif",
     "type": "video",
-    "api_video_code": "vi2TXrzTDmZsJV9fKFyFgt6E"
+    "api_video_code": "vi2TXrzTDmZsJV9fKFyFgt6E",
+    "year": 2018,
   },
   {
     "slag": "look_what_i_ve_found",
@@ -48,6 +54,7 @@ export const works_config = [
     "thumbnail": "look what i\\'ve found.gif",
     "type": "video",
     "api_video_code": "vi3Lm9bCwSZP7KxffJXClIEA",
+    "year": 2019,
   },
   {
     "slag": "no_show",
@@ -55,6 +62,7 @@ export const works_config = [
     "thumbnail": "abc2_cuted_no_works.gif",
     "type": "video",
     "api_video_code": "vi6jMww72lRPO9CvvOIemYpR",
+    "year": 2019,
   },
   {
     "slag": "trek",
@@ -62,6 +70,7 @@ export const works_config = [
     "thumbnail": "2020-01-31T17-40-25-000_live.gif",
     "type": "video",
     //"api_video_code": "vi4VXYZ1251bqbXs2cBfO9kw",
+    "year": 2020,
   },
   {
     "slag": "four_rooms",
@@ -69,6 +78,7 @@ export const works_config = [
     "thumbnail": "four_rooms_07.gif",
     "type": "video",
     "api_video_code": "vi1IMlsz8rkLHA2QdH0MCTue",
+    "year": 2021,
   }
 ]
 
