@@ -17,3 +17,9 @@ there are two ways of running in dev mode
 ## generate thumbnails
 
 `vid2gif.sh -f 2 -w 130 -d 5 <VIDEO_FILE>`
+
+
+## SSL certificate
+
+add https support 
+https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
