@@ -37,7 +37,7 @@ export default function App() {
             </Route>
           </Switch>
         </div>
-
+        {/*
         <div className="navi">
           <nav>
             <ul>
@@ -53,6 +53,7 @@ export default function App() {
             </ul>
           </nav>
         </div>
+        */}
       </Router>
   );
 }
