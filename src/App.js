@@ -18,6 +18,15 @@ import useWindowDimensions from "./helpers/WindowDimensions";
 
 export default function App() {
   const { height, width } = useWindowDimensions();
+  const videoJsOptions = {
+    muted: true,
+    autoplay: true,
+    controls: false,
+    fluid: true,
+
+
+  }
+
   return (
       <Router>
         <div className="content">
@@ -28,7 +37,7 @@ export default function App() {
                 <Route key={i} path={`/works/${entry.slag}`}>
                   {/*<Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
                   */}
-                  <VideoJsPlayer/>
+                  <VideoJsPlayer { ...videoJsOptions } api_video_code={entry.api_video_code}  backround_color={entry.background_color} />
                 </Route>
             ))}
             <Route path="/about">

@@ -1,65 +1,36 @@
-import React, { Component } from 'react';
-import VideoPlayer from 'react-video-js-player';
+import React from 'react';
+import videojs from 'video.js'
+import 'video.js/dist/video-js.css';
+import './VideoJsPlayer.css'
 
-export class VideoJsPlayer extends Component {
-    player = {}
-    state = {
-        video: {
-            src: `/media/src/1 2 Screen A.mov`,
-            autoplay: true,
-            hideControls: ['play','volume','seekbar','timer','playbackrates','fullscreen']
+export class VideoJsPlayer extends React.Component {
+    componentDidMount() {
+        document.body.style = 'background: '+this.props.backround_color+';';
+        // instantiate Video.js
+        let options = {...this.props, sources: [{src: `https://cdn.api.video/vod/${this.props.api_video_code}/hls/manifest.m3u8`}]};
+        console.log(options);
+        this.player = videojs(this.videoNode, options, function onPlayerReady() {
+            console.log('onPlayerReady', this)
+        });
+    }
 
+    // destroy player on unmount
+    componentWillUnmount() {
+        if (this.player) {
+            this.player.dispose()
         }
     }
 
-    onPlayerReady(player){
-        console.log("Player is ready: ", player);
-        this.player = player;
-    }
-
-    onVideoPlay(duration){
-        console.log("Video played at: ", duration);
-    }
-
-    onVideoPause(duration){
-        console.log("Video paused at: ", duration);
-    }
-
-    onVideoTimeUpdate(duration){
-        console.log("Time updated: ", duration);
-    }
-
-    onVideoSeeking(duration){
-        console.log("Video seeking: ", duration);
-    }
-
-    onVideoSeeked(from, to){
-        console.log(`Video seeked from ${from} to ${to}`);
-    }
-
-    onVideoEnd(){
-        console.log("Video ended");
-    }
-
+    // wrap the player in a div with a `data-vjs-player` attribute
+    // so videojs won't create additional wrapper in the DOM
+    // see https://github.com/videojs/video.js/pull/3856
     render() {
         return (
-            <div>
-                <VideoPlayer
-                    autoplay={true}
-                    controls={false}
-                    src={this.state.video.src}
-                    poster={this.state.video.poster}
-                    width="720"
-                    height="420"
-                    onReady={this.onPlayerReady.bind(this)}
-                    onPlay={this.onVideoPlay.bind(this)}
-                    onPause={this.onVideoPause.bind(this)}
-                    onTimeUpdate={this.onVideoTimeUpdate.bind(this)}
-                    onSeeking={this.onVideoSeeking.bind(this)}
-                    onSeeked={this.onVideoSeeked.bind(this)}
-                    onEnd={this.onVideoEnd.bind(this)}
-                />
+            <div className="video_wrapper">
+                <div className="video_container" >
+                    <video ref={node => this.videoNode = node} className="video-js"/>
+                </div>
             </div>
-        );
+        )
     }
 }
