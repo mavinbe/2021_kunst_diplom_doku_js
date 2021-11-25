@@ -14,6 +14,7 @@ import {HomeContent} from './component/HomeContent'
 
 import {works_config} from './description/works';
 import useWindowDimensions from "./helpers/WindowDimensions";
+import {useSwipeable} from "react-swipeable";
 
 
 export default function App() {
@@ -27,17 +28,25 @@ export default function App() {
 
   }
 
+
+
+  const works = works_config.map((entry, i) => {
+    const len = works_config.length;
+    entry.url_to_prev_entry = `/works/${works_config[(i+len-1)%len].slag}`
+    entry.url_to_next_entry = `/works/${works_config[(i+1)%len].slag}`
+    return entry;
+  });
   return (
       <Router>
         <div className="content">
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            {works_config.map((entry, i) => (
+            {works.map((entry, i) => (
                 <Route key={i} path={`/works/${entry.slag}`}>
                   {/*<Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
                   */}
-                  <VideoJsPlayer { ...videoJsOptions } api_video_code={entry.api_video_code}  backround_color={entry.background_color} />
+                  <VideoJsPlayer { ...videoJsOptions } api_video_code={entry.api_video_code}  backround_color={entry.background_color} url_to_prev_entry={entry.url_to_prev_entry} url_to_next_entry={entry.url_to_next_entry} />
                 </Route>
             ))}
             <Route path="/about">
