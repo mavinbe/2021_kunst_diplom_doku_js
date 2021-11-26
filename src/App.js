@@ -26,9 +26,9 @@ export default function App() {
 
   const works = works_config.map((entry, i) => {
     const len = works_config.length;
-    //entry.url_to_prev_entry = `/works/${works_config[(i+len-1)%len].slag}`
-    entry.prev_entry = works_config[(i+len-1)%len].slag
-    entry.next_entry = works_config[(i+1)%len].slag
+    //entry.url_to_prev_entry = `/works/${works_config[(i+len-1)%len].slug}`
+    entry.prev_entry = works_config[(i+len-1)%len].slug
+    entry.next_entry = works_config[(i+1)%len].slug
     return entry;
   });
 
@@ -42,10 +42,10 @@ export default function App() {
             renders the first one that matches the current URL. */}
           <Switch>
             {works.map((entry, i) => (
-                <Route key={i} path={`/works/${entry.slag}`}>
+                <Route key={i} path={`/works/${entry.slug}`}>
                   {/*<Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
                   */}
-                  <VideoJsPlayer slug={entry.slag} current_work_state={current_work_state} videoJsOptions={{ ...videoJsOptions, sources: [{src: `https://cdn.api.video/vod/${entry.api_video_code}/hls/manifest.m3u8`}] }}   backround_color={entry.background_color} prev_entry={entry.prev_entry} next_entry={entry.next_entry} windowHeight={height} windowWidth={width} />
+                  <VideoJsPlayer slug={entry.slug} current_work_state={current_work_state} videoJsOptions={{ ...videoJsOptions, sources: [{src: `https://cdn.api.video/vod/${entry.api_video_code}/hls/manifest.m3u8`}] }}   backround_color={entry.background_color} prev_entry={entry.prev_entry} next_entry={entry.next_entry} windowHeight={height} windowWidth={width} />
                 </Route>
             ))}
             <Route path="/about">

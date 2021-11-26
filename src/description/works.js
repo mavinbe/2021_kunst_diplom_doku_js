@@ -1,6 +1,6 @@
 export const works_config = [
   {
-    slag: "ot_noise",
+    slug: "ot_noise",
     name: "o.T.(noise)",
     thumbnail: "2016_03_30_IMG_2353_print_v2.gif",
     type: "img",
@@ -9,7 +9,7 @@ export const works_config = [
     year: 2016,
   },
   {
-    slag: "radmaschine_spielen",
+    slug: "radmaschine_spielen",
     name: "radmaschine spielen",
     thumbnail: "1 2 Screen A.gif",
     type: "video",
@@ -18,7 +18,7 @@ export const works_config = [
     background_color: "#5701a7",
   },
   {
-    slag: "radmaschine_gips",
+    slug: "radmaschine_gips",
     name: "radmaschine gips",
     thumbnail: "GOPR3912.gif",
     type: "video",
@@ -27,7 +27,7 @@ export const works_config = [
     background_color: "#B23850",
   },
   {
-    slag: "radmaschine_version_dark_horses",
+    slug: "radmaschine_version_dark_horses",
     name: "radmaschine version \"dark horses\"",
     thumbnail: "IMG_3131.gif",
     type: "video",
@@ -35,7 +35,7 @@ export const works_config = [
     year: 2017,
   },
   {
-    slag: "post_hopo_1",
+    slug: "post_hopo_1",
     name: "post-hopo 1",
     thumbnail: "Starren Dummy.gif",
     type: "video",
@@ -43,7 +43,7 @@ export const works_config = [
     year: 2018,
   },
   {
-    slag: "gleich_gehts_weiter_post_hopo_2",
+    slug: "gleich_gehts_weiter_post_hopo_2",
     name: "gleich gehts weiter - post-hopo 2",
     thumbnail: "Follow_G_small.gif",
     type: "video",
@@ -51,7 +51,7 @@ export const works_config = [
     year: 2018,
   },
   {
-    slag: "look_what_i_ve_found",
+    slug: "look_what_i_ve_found",
     name: "look what i've found",
     thumbnail: "look what i\\'ve found.gif",
     type: "video",
@@ -59,7 +59,7 @@ export const works_config = [
     year: 2019,
   },
   {
-    slag: "no_show",
+    slug: "no_show",
     name: "no show",
     thumbnail: "abc2_cuted_no_works.gif",
     type: "video",
@@ -67,7 +67,7 @@ export const works_config = [
     year: 2019,
   },
   {
-    slag: "trek",
+    slug: "trek",
     name: "trek",
     thumbnail: "2020-01-31T17-40-25-000_live.gif",
     type: "video",
@@ -76,7 +76,7 @@ export const works_config = [
     background_color: "#cee500"
   },
   {
-    slag: "four_rooms",
+    slug: "four_rooms",
     name: "four rooms",
     thumbnail: "four_rooms_07.gif",
     type: "video",
