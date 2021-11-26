@@ -7,6 +7,7 @@ export const works_config = [
     "soruce": "",
     //api_video_code: "vi54sj9dAakOHJXKrUycCQZp"
     year: 2016,
+    background_color: "#000000"
   },
   {
     slug: "radmaschine_spielen",
@@ -33,6 +34,7 @@ export const works_config = [
     type: "video",
     api_video_code: "vi3dJDzb8Nl87vZ5rZPaAj8d",
     year: 2017,
+    background_color: "#ffb800"
   },
   {
     slug: "post_hopo_1",
@@ -41,6 +43,7 @@ export const works_config = [
     type: "video",
     api_video_code: "vi240tdYJZbAbbFe7YJ2Uy76",
     year: 2018,
+    background_color: "#00da6c"
   },
   {
     slug: "gleich_gehts_weiter_post_hopo_2",
@@ -49,6 +52,7 @@ export const works_config = [
     type: "video",
     api_video_code: "vi6XUXvwPwsiinPaCMnxquy7",
     year: 2018,
+    background_color: "#000dff"
   },
   {
     slug: "look_what_i_ve_found",
@@ -57,6 +61,7 @@ export const works_config = [
     type: "video",
     api_video_code: "vi5o2r7BlY7fXM9aTZRJQ34z",
     year: 2019,
+    background_color: "#b00000"
   },
   {
     slug: "no_show",
@@ -65,6 +70,7 @@ export const works_config = [
     type: "video",
     api_video_code: "vi5G1Z3iIWID0oZrM0bXZDsy",
     year: 2019,
+    background_color: "#45b561"
   },
   {
     slug: "trek",
@@ -73,7 +79,7 @@ export const works_config = [
     type: "video",
     api_video_code: "vi5frhdx5mBensTwju0Yfv0C",
     year: 2020,
-    background_color: "#cee500"
+    background_color: "#ff6200"
   },
   {
     slug: "four_rooms",
@@ -82,6 +88,7 @@ export const works_config = [
     type: "video",
     api_video_code: "viImqk4sUU8nN6Dl57mSZiX",
     year: 2021,
+    background_color: "#ff0090"
   }
 ]
 
