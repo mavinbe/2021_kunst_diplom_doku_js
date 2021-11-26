@@ -34,8 +34,6 @@ export default function App() {
           <Switch>
             {works.map((entry, i) => (
                 <Route key={i} path={`/works/${entry.slug}`}>
-                  {/*<Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
-                  */}
                   <VideoJsPlayer slug={entry.slug} current_work_state={current_work_state} api_video_code={entry.api_video_code}   backround_color={entry.background_color} prev_entry={entry.prev_entry} next_entry={entry.next_entry} windowHeight={height} windowWidth={width} />
                 </Route>
             ))}
