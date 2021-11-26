@@ -11,6 +11,16 @@ export function VideoJsPlayer( props )  {
     const videoRef = React.useRef(null);
     const playerRef = React.useRef(null);
 
+    const videoJsOptions = {
+        muted: true,
+        autoplay: true,
+        controls: false,
+        fluid: true,
+        loop: true,
+        sources: [{src: `https://cdn.api.video/vod/${props.api_video_code}/hls/manifest.m3u8`}]
+
+    }
+
     console.log(props.current_work_state)
     React.useEffect(() => {
         window.removeEventListener('keydown', handleKeyDown)
@@ -26,7 +36,7 @@ export function VideoJsPlayer( props )  {
             const videoElement = videoRef.current;
             if (!videoElement) return;
 
-            playerRef.current = videojs(videoElement, props.videoJsOptions, () => {
+            playerRef.current = videojs(videoElement, videoJsOptions, () => {
                 console.log("player is ready");
 
             });
@@ -36,7 +46,7 @@ export function VideoJsPlayer( props )  {
             // player.autoplay(props.videoJsOptions.autoplay);
             // player.src(props.videoJsOptions.sources);
         }
-    }, [props.videoJsOptions, videoRef]);
+    }, [videoJsOptions, videoRef]);
 
     // Dispose the Video.js player when the functional component unmounts
     React.useEffect(() => {
