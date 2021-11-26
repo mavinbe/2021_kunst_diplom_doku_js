@@ -1,12 +1,9 @@
 import React, {useState} from "react";
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from "react-router-dom";
-import {
-  CacheRoute,
-  CacheSwitch
-} from "react-router-cache-route";
 
 import './App.css';
 import {VideoJsPlayer} from "./component/api.video/VideoJsPlayer";
@@ -43,13 +40,13 @@ export default function App() {
         <div className="content">
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-          <CacheSwitch>
+          <Switch>
             {works.map((entry, i) => (
-                <CacheRoute key={i} path={`/works/${entry.slag}`}>
+                <Route key={i} path={`/works/${entry.slag}`}>
                   {/*<Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
                   */}
                   <VideoJsPlayer slug={entry.slag} current_work_state={current_work_state} videoJsOptions={{ ...videoJsOptions, sources: [{src: `https://cdn.api.video/vod/${entry.api_video_code}/hls/manifest.m3u8`}] }}   backround_color={entry.background_color} prev_entry={entry.prev_entry} next_entry={entry.next_entry} windowHeight={height} windowWidth={width} />
-                </CacheRoute>
+                </Route>
             ))}
             <Route path="/about">
               <About />
@@ -60,7 +57,7 @@ export default function App() {
             <Route path="/">
               <Home />
             </Route>
-          </CacheSwitch>
+          </Switch>
         </div>
         {/*
         <div className="navi">
