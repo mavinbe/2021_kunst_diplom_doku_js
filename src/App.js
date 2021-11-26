@@ -2,20 +2,14 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import './App.css';
 
-import {Player} from './component/api.video/Player'
 import {VideoJsPlayer} from "./component/api.video/VideoJsPlayer";
 import {HomeContent} from './component/HomeContent'
-
-
 import {works_config} from './description/works';
 import useWindowDimensions from "./helpers/WindowDimensions";
-import {useSwipeable} from "react-swipeable";
-
 
 export default function App() {
   const { height, width } = useWindowDimensions();
@@ -24,7 +18,7 @@ export default function App() {
     autoplay: true,
     controls: false,
     fluid: true,
-
+    loop: true
 
   }
 
@@ -36,6 +30,7 @@ export default function App() {
     entry.url_to_next_entry = `/works/${works_config[(i+1)%len].slag}`
     return entry;
   });
+
   return (
       <Router>
         <div className="content">
@@ -46,7 +41,7 @@ export default function App() {
                 <Route key={i} path={`/works/${entry.slag}`}>
                   {/*<Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
                   */}
-                  <VideoJsPlayer { ...videoJsOptions } api_video_code={entry.api_video_code}  backround_color={entry.background_color} url_to_prev_entry={entry.url_to_prev_entry} url_to_next_entry={entry.url_to_next_entry} />
+                  <VideoJsPlayer { ...videoJsOptions } sources={[{src: `https://cdn.api.video/vod/${entry.api_video_code}/hls/manifest.m3u8`}]}  api_video_code={entry.api_video_code}  backround_color={entry.background_color} url_to_prev_entry={entry.url_to_prev_entry} url_to_next_entry={entry.url_to_next_entry} windowHeight={height} windowWidth={width} />
                 </Route>
             ))}
             <Route path="/about">
