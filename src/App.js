@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   BrowserRouter as Router,
-  Switch,
   Route
 } from "react-router-dom";
-import './App.css';
+import {
+  CacheRoute,
+  CacheSwitch
+} from "react-router-cache-route";
 
+import './App.css';
 import {VideoJsPlayer} from "./component/api.video/VideoJsPlayer";
 import {HomeContent} from './component/HomeContent'
 import {works_config} from './description/works';
@@ -26,23 +29,27 @@ export default function App() {
 
   const works = works_config.map((entry, i) => {
     const len = works_config.length;
-    entry.url_to_prev_entry = `/works/${works_config[(i+len-1)%len].slag}`
-    entry.url_to_next_entry = `/works/${works_config[(i+1)%len].slag}`
+    //entry.url_to_prev_entry = `/works/${works_config[(i+len-1)%len].slag}`
+    entry.prev_entry = works_config[(i+len-1)%len].slag
+    entry.next_entry = works_config[(i+1)%len].slag
     return entry;
   });
+
+  const [currentWork, setCurrentWork] = useState(null)
+  const current_work_state = {value:currentWork, set:setCurrentWork};
 
   return (
       <Router>
         <div className="content">
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-          <Switch>
+          <CacheSwitch>
             {works.map((entry, i) => (
-                <Route key={i} path={`/works/${entry.slag}`}>
+                <CacheRoute key={i} path={`/works/${entry.slag}`}>
                   {/*<Player name={entry.name} api_video_code={entry.api_video_code} windowHeight={height} windowWidth={width}  />
                   */}
-                  <VideoJsPlayer { ...videoJsOptions } sources={[{src: `https://cdn.api.video/vod/${entry.api_video_code}/hls/manifest.m3u8`}]}  api_video_code={entry.api_video_code}  backround_color={entry.background_color} url_to_prev_entry={entry.url_to_prev_entry} url_to_next_entry={entry.url_to_next_entry} windowHeight={height} windowWidth={width} />
-                </Route>
+                  <VideoJsPlayer slug={entry.slag} current_work_state={current_work_state} videoJsOptions={{ ...videoJsOptions, sources: [{src: `https://cdn.api.video/vod/${entry.api_video_code}/hls/manifest.m3u8`}] }}   backround_color={entry.background_color} prev_entry={entry.prev_entry} next_entry={entry.next_entry} windowHeight={height} windowWidth={width} />
+                </CacheRoute>
             ))}
             <Route path="/about">
               <About />
@@ -53,7 +60,7 @@ export default function App() {
             <Route path="/">
               <Home />
             </Route>
-          </Switch>
+          </CacheSwitch>
         </div>
         {/*
         <div className="navi">
