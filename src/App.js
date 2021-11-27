@@ -10,6 +10,7 @@ import {VideoJsPlayer} from "./component/api.video/VideoJsPlayer";
 import {HomeContent} from './component/HomeContent'
 import {works_config} from './description/works';
 import useWindowDimensions from "./helpers/WindowDimensions";
+import {Media} from "./component/Media";
 
 export default function App() {
   const { height, width } = useWindowDimensions();
@@ -34,7 +35,7 @@ export default function App() {
           <Switch>
             {works.map((entry, i) => (
                 <Route key={i} path={`/works/${entry.slug}`}>
-                  <VideoJsPlayer slug={entry.slug} current_work_state={current_work_state} api_video_code={entry.api_video_code}   backround_color={entry.background_color} prev_entry={entry.prev_entry} next_entry={entry.next_entry} windowHeight={height} windowWidth={width} />
+                  <Media work={entry} current_work_state={current_work_state} windowHeight={height} windowWidth={width}   />
                 </Route>
             ))}
             <Route path="/about">

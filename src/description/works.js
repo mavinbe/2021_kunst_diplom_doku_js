@@ -4,10 +4,10 @@ export const works_config = [
     name: "o.T.(noise)",
     thumbnail: "2016_03_30_IMG_2353_print_v2.gif",
     type: "img",
-    "soruce": "",
+    src: "2016_03_30_IMG_2353_print_v2_smaller.jpg",
     //api_video_code: "vi54sj9dAakOHJXKrUycCQZp"
     year: 2016,
-    background_color: "#000000"
+    background_color: "#d9dbc2"
   },
   {
     slug: "radmaschine_spielen",
