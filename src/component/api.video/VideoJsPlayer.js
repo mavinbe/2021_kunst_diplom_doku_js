@@ -31,6 +31,8 @@ export function VideoJsPlayer( props )  {
 
             playerRef.current = videojs(videoElement, videoJsOptions, () => {
                 console.log("player is ready");
+                const player = playerRef.current;
+                //console.log(player.play());
 
             });
         } else {
@@ -53,10 +55,30 @@ export function VideoJsPlayer( props )  {
         };
     }, [playerRef]);
 
+    function handleKeyDown(e) {
+        const player  = playerRef.current;
+        if(e.code === 'ArrowUp'){
+            player.play();
+        }
 
 
+    }
+
+    const swipe_handlers = useSwipeable({
+        onTap: (eventData) => {
+            const player  = playerRef.current;
+            player.play();
+        },
+        ...{
+            delta: 10,                            // min distance(px) before a swipe starts. *See Notes*
+            preventDefaultTouchmoveEvent: false,  // call e.preventDefault *See Details*
+            trackTouch: true,                     // track touch input
+            trackMouse: true,                    // track mouse input
+            rotationAngle: 0,                     // set a rotation angle
+        },
+    });
     return (
-            <div className="video_container" style={props.style}>
+            <div {...swipe_handlers} className="video_container" style={props.style}>
                 <video ref={videoRef} className="video-js"/>
             </div>
     );
