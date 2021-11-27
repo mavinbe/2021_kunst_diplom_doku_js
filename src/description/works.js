@@ -7,7 +7,9 @@ export const works_config = [
     src: "2016_03_30_IMG_2353_print_v2_smaller.jpg",
     //api_video_code: "vi54sj9dAakOHJXKrUycCQZp"
     year: 2016,
-    background_color: "#d9dbc2"
+    background_color: "#d9dbc2",
+    width: 1980,
+    height: 594,
   },
   {
     slug: "radmaschine_spielen",
@@ -17,6 +19,8 @@ export const works_config = [
     api_video_code: "vi6AdoUjNTkEfpxoFd9RxJbc",
     year: 2016,
     background_color: "#5701a7",
+    width: 640,
+    height: 272,
   },
   {
     slug: "radmaschine_gips",
@@ -26,6 +30,8 @@ export const works_config = [
     api_video_code: "vi5j0SnnM2ak4HOaYzY2UZZ6",
     year: 2017,
     background_color: "#B23850",
+    width: 1280,
+    height: 720,
   },
   {
     slug: "radmaschine_version_dark_horses",
@@ -34,7 +40,9 @@ export const works_config = [
     type: "video",
     api_video_code: "vi3dJDzb8Nl87vZ5rZPaAj8d",
     year: 2017,
-    background_color: "#ffb800"
+    background_color: "#ffb800",
+    width: 1920,
+    height: 1080,
   },
   {
     slug: "post_hopo_1",
@@ -43,7 +51,9 @@ export const works_config = [
     type: "video",
     api_video_code: "vi240tdYJZbAbbFe7YJ2Uy76",
     year: 2018,
-    background_color: "#00da6c"
+    background_color: "#00da6c",
+    width: 1920,
+    height: 1080,
   },
   {
     slug: "gleich_gehts_weiter_post_hopo_2",
@@ -52,7 +62,9 @@ export const works_config = [
     type: "video",
     api_video_code: "vi6XUXvwPwsiinPaCMnxquy7",
     year: 2018,
-    background_color: "#000dff"
+    background_color: "#000dff",
+    width: 640,
+    height: 336,
   },
   {
     slug: "look_what_i_ve_found",
@@ -61,7 +73,9 @@ export const works_config = [
     type: "video",
     api_video_code: "vi5o2r7BlY7fXM9aTZRJQ34z",
     year: 2019,
-    background_color: "#b00000"
+    background_color: "#b00000",
+    width: 1728,
+    height: 1080,
   },
   {
     slug: "no_show",
@@ -70,7 +84,9 @@ export const works_config = [
     type: "video",
     api_video_code: "vi5G1Z3iIWID0oZrM0bXZDsy",
     year: 2019,
-    background_color: "#45b561"
+    background_color: "#45b561",
+    width: 1920,
+    height: 1080,
   },
   {
     slug: "trek",
@@ -79,7 +95,9 @@ export const works_config = [
     type: "video",
     api_video_code: "vi5frhdx5mBensTwju0Yfv0C",
     year: 2020,
-    background_color: "#ff6200"
+    background_color: "#ff6200",
+    width: 2880,
+    height: 1620,
   },
   {
     slug: "four_rooms",
@@ -88,7 +106,9 @@ export const works_config = [
     type: "video",
     api_video_code: "viImqk4sUU8nN6Dl57mSZiX",
     year: 2021,
-    background_color: "#ff0090"
+    background_color: "#ff0090",
+    width: 1920,
+    height: 1444,
   }
 ]
 

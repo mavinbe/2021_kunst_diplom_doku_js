@@ -5,6 +5,7 @@ import './Media.css'
 import {useSwipeable} from "react-swipeable";
 import { useHistory } from "react-router-dom";
 import {VideoJsPlayer} from "./api.video/VideoJsPlayer";
+import {contain} from "../helpers/DimensionFitter";
 
 
 export function Media( props )  {
@@ -53,17 +54,22 @@ export function Media( props )  {
         }
 
     }
+    const contain_dimensions = contain({width: props.work.width, height:props.work.height}, {width: props.windowWidth, height: props.windowHeight*0.8});
+
     let media_content = null;
     if(props.work.type === "video") {
-        media_content = <VideoJsPlayer current_work_state={props.current_work_state} windowHeight={props.windowHeight} windowWidth={props.windowWidth} api_video_code={props.work.api_video_code} />;
+        media_content = <VideoJsPlayer  style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}  current_work_state={props.current_work_state} windowHeight={props.windowHeight} windowWidth={props.windowWidth} api_video_code={props.work.api_video_code} />;
     }else{
-        media_content = <img src={`/media/src/${props.work.src}`} alt="Logo" /> ;
+        media_content = <img  style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}  src={`/media/src/${props.work.src}`} alt="Logo" /> ;
 
     }
     return (
-        <div {...swipe_handlers}   className="media_wrapper" >
-            <div>asasdasdd</div>
-            {media_content}
+        <div {...swipe_handlers}   className="media_wrapper">
+            <div>
+                <span className="meta">{props.work.name}</span><span className="meta media_wrapper_year">{props.work.year}</span>
+                {media_content}
+            </div>
+
         </div>
     );
 }

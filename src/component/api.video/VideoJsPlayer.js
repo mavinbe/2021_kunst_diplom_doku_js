@@ -15,6 +15,8 @@ export function VideoJsPlayer( props )  {
         autoplay: false,
         controls: false,
         fluid: true,
+        fill: true,
+        //responsive: false,
         loop: true,
         sources: [{src: `https://cdn.api.video/vod/${props.api_video_code}/hls/manifest.m3u8`}]
 
@@ -54,7 +56,7 @@ export function VideoJsPlayer( props )  {
 
 
     return (
-            <div className="video_container" >
+            <div className="video_container" style={props.style}>
                 <video ref={videoRef} className="video-js"/>
             </div>
     );
