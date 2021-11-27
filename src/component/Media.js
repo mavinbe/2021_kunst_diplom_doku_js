@@ -66,8 +66,9 @@ export function Media( props )  {
     return (
         <div {...swipe_handlers}   className="media_wrapper">
             <div>
-                <span className="meta">{props.work.name}</span><span className="meta media_wrapper_year">{props.work.year}</span>
+                <span className="meta">{props.work.name}</span>
                 {media_content}
+                <span className="meta">{props.work.year}</span>
             </div>
 
         </div>
