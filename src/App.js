@@ -29,7 +29,7 @@ export default function App() {
 
   return (
       <Router>
-        <div className="content">
+
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
@@ -48,7 +48,6 @@ export default function App() {
               <Home />
             </Route>
           </Switch>
-        </div>
         {/*
         <div className="navi">
           <nav>
