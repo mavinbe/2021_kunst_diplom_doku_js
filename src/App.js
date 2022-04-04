@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter as Router, Link,
   Route,
   Switch
 } from "react-router-dom";
@@ -48,8 +48,12 @@ export default function App() {
               <Home />
             </Route>
           </Switch>
-        {/*
+
         <div className="navi">
+          <div className="navi-toggle">
+            <div> lII</div>
+          </div>
+          {/*
           <nav>
             <ul>
               <li>
@@ -61,10 +65,12 @@ export default function App() {
               <li>
                 <Link to="/users">Users</Link>
               </li>
+
             </ul>
           </nav>
+          */}
         </div>
-        */}
+
       </Router>
   );
 }

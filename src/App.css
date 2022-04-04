@@ -1,13 +1,23 @@
 
 .navi {
-  display: block;
-  opacity: 0.1;
-  position: absolute;
-  background: white;
-  border: thin black solid;
+  position: fixed;
   padding: 0px;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.navi-toggle {
+  background-color: black;
+  color: white;
+  padding: 10px 10px 10px 20px;
+  font-size: 150%;
+  line-height: 60%;
+}
+
+.navi-toggle div{
+  display: block;
+  transform: rotate(-90deg);
+
 }
 nav ul{
   padding: 0 10px;
