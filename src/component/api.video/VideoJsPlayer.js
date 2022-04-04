@@ -12,15 +12,24 @@ export function VideoJsPlayer( props )  {
 
     const videoJsOptions = {
         muted: true,
-        autoplay: false,
-        controls: false,
+        autoplay: true,
+        controls: true,
         playsinline: true,
         fluid: true,
         fill: true,
         //responsive: false,
         loop: true,
-        sources: [{src: `https://cdn.api.video/vod/${props.api_video_code}/hls/manifest.m3u8`}]
-
+        sources: [{src: `https://cdn.api.video/vod/${props.api_video_code}/hls/manifest.m3u8`}],
+        //poster: `https://cdn.api.video/vod/${props.api_video_code}/thumbnail.jpg`
+        controlBar: {
+            fullscreenToggle: false,
+            pictureInPictureToggle: false,
+            subsCapsButton: false,
+            volumePanel: false,
+            playToggle: false,
+            remainingTimeDisplay: false
+        },
+        bigPlayButton: false
     }
 
     React.useEffect(() => {
@@ -79,7 +88,7 @@ export function VideoJsPlayer( props )  {
         },
     });
     return (
-            <div {...swipe_handlers} className="video_container" style={props.style}>
+            <div  className="video_container" style={props.style}>
                 <video ref={videoRef} className="video-js"/>
             </div>
     );
