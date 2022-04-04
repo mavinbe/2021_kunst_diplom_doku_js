@@ -14,6 +14,7 @@ export function VideoJsPlayer( props )  {
         muted: true,
         autoplay: false,
         controls: false,
+        playsinline: true,
         fluid: true,
         fill: true,
         //responsive: false,
