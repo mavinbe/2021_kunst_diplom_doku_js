@@ -1,13 +1,20 @@
-.qr_wrapper {
+.site_title_wrapper {
     text-align: center;
-
     padding-top: 45px;
     padding-bottom: 25px;
     background-color: white;
 }
 
+.site_title_top {
+    font-size: 190%;
+}
+
+.site_title_bottom {
+    font-size: 100%;
+}
+
 .qr {
-    width: 112px;
+    width: 152px;
 }
 
 .year {

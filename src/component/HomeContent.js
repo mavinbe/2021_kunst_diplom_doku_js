@@ -56,8 +56,10 @@ export class HomeContent extends React.Component {
                 <Container>
                     <Row>
                         <Col key="qr"  md={12} sm={12} xs={12} >
-                            <div className="qr_wrapper">
+                            <div className="site_title_wrapper">
+                                <div className="site_title_top">diplom doku</div>
                                 <img className="qr"  src={`media/img/qr.png`} alt="Logo" />
+                                <div className="site_title_bottom">malte-levin behrens</div>
                             </div>
                         </Col>
                         {this.year_sections}
