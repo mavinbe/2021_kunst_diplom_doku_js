@@ -1,5 +1,29 @@
+.navi_home {
+    position: fixed;
+    padding: 0px;
+    top: -1px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+.navi_home .navi-toggle {
+    background-color: black;
+    color: white;
+    padding: 10px 10px 10px 20px;
+    font-size: 150%;
+    line-height: 60%;
+}
+
+.navi_home .navi-toggle div{
+    display: block;
+    transform: rotate(-90deg);
+    text-align: center;
+
+}
+
 .content_wrapper {
     background-color: black;
+    padding-top: 15px;
 }
 
 .site_title_wrapper {

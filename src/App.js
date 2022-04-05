@@ -49,33 +49,7 @@ export default function App() {
               <Home />
             </Route>
           </Switch>
-        <div className="navi">
-          <Container>
-            <Row>
-              <Col key="navi"  md={12} sm={12} xs={12} >
-                  <div className="navi-toggle">
-                    <div> lII</div>
-                  </div>
-                  {/*
-                  <nav>
-                    <ul>
-                      <li>
-                        <Link to="/">Home</Link>
-                      </li>
-                      <li>
-                        <Link to="/about">About</Link>
-                      </li>
-                      <li>
-                        <Link to="/users">Users</Link>
-                      </li>
 
-                    </ul>
-                  </nav>
-                  */}
-              </Col>
-            </Row>
-          </Container>
-        </div>
 
       </Router>
   );

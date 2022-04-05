@@ -52,19 +52,48 @@ export class HomeContent extends React.Component {
 
 
         return (
-            <div className="content_wrapper">
-                <Container>
-                    <Row>
-                        <Col key="qr"  md={12} sm={12} xs={12} >
-                            <div className="site_title_wrapper">
-                                <div className="site_title_top">diplom doku</div>
-                                <img className="qr"  src={`media/img/qr.png`} alt="Logo" />
-                                <div className="site_title_bottom">malte-levin behrens</div>
-                            </div>
-                        </Col>
-                        {this.year_sections}
-                    </Row>
-                </Container>
+            <div>
+                <div className="content_wrapper">
+                    <Container>
+                        <Row>
+                            <Col key="qr"  md={12} sm={12} xs={12} >
+                                <div className="site_title_wrapper">
+                                    <div className="site_title_top">diplom doku</div>
+                                    <img className="qr"  src={`media/img/qr.png`} alt="Logo" />
+                                    <div className="site_title_bottom">malte-levin behrens</div>
+                                </div>
+                            </Col>
+                            {this.year_sections}
+                        </Row>
+                    </Container>
+                </div>
+                <div className="navi_home">
+                    <Container>
+                        <Row>
+                            <Col key="navi_home"  md={12} sm={12} xs={12} >
+                                <div className="navi-toggle">
+                                    <div> lII</div>
+                                </div>
+                                {/*
+                                  <nav>
+                                    <ul>
+                                      <li>
+                                        <Link to="/">Home</Link>
+                                      </li>
+                                      <li>
+                                        <Link to="/about">About</Link>
+                                      </li>
+                                      <li>
+                                        <Link to="/users">Users</Link>
+                                      </li>
+
+                                    </ul>
+                                  </nav>
+                                  */}
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
             </div>
         );
     }

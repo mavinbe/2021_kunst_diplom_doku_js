@@ -1,3 +1,35 @@
+.navi_media {
+    position: fixed;
+    padding: 0px;
+    top: -1px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+}
+.navi_media .navi_media_entry {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 0;
+}
+
+.navi_media_entry div img{
+    position: relative;
+    width: 33px;
+}
+
+.navi_media .navi-left-button{
+    text-align: left;
+}
+
+.navi_media .navi-home-button{
+    text-align: center;
+}
+
+.navi_media .navi-right-button{
+    text-align: right;
+}
+
 .media_wrapper {
     display: flex;
     align-items: center;

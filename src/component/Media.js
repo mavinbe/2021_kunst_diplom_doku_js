@@ -6,6 +6,7 @@ import {useSwipeable} from "react-swipeable";
 import { useHistory } from "react-router-dom";
 import {VideoJsPlayer} from "./api.video/VideoJsPlayer";
 import {contain} from "../helpers/DimensionFitter";
+import {Col, Container, Row} from "react-grid-system";
 
 
 export function Media( props )  {
@@ -31,7 +32,13 @@ export function Media( props )  {
         console.log("history.push("+url+")");
     }
 
+    function handleClickLeft() {
+        handleClick(props.work.prev_entry)
+    }
 
+    function handleClickRight() {
+        handleClick(props.work.next_entry)
+    }
 
     const swipe_handlers = useSwipeable({
         onSwipedRight: (eventData) => handleClick(props.work.prev_entry),
@@ -70,7 +77,35 @@ export function Media( props )  {
                 {media_content}
                 <span className="meta">{props.work.year}</span>
             </div>
+            <div className="navi_media">
+                <Container>
+                    <Row>
+                        <Col className="navi_media_entry" key="navi_left"  md={4} sm={4} xs={4} >
+                            <a onClick={handleClickLeft} href="#">
+                                <div className="navi-left-button">
+                                    <img src="/icon/arrow_left.png"></img>
+                                </div>
+                            </a>
+                        </Col>
+                        <Col className="navi_media_entry" key="navi_home"  md={4} sm={4} xs={4} >
 
+                            <div className="navi-home-button">
+                                <a href="/">
+                                    <img src="/icon/home.png"></img>
+                                </a>
+                            </div>
+
+                        </Col>
+                        <Col className="navi_media_entry" key="navi_right"  md={4} sm={4} xs={4} >
+                            <a onClick={handleClickRight} href="#">
+                                <div className="navi-right-button">
+                                    <img src="/icon/arrow_right.png"></img>
+                                </div>
+                            </a>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 }
