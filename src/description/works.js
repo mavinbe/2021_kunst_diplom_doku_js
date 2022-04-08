@@ -16,7 +16,7 @@ export const works_config = [
   },
   {
     slug: "radmaschine_spielen",
-    name: "radmaschine spielen",
+    name: "radmaschine&nbsp;version \"spielen\"",
     thumbnail: "1 2 Screen A.gif",
     type: "video",
     api_video_code: "vi6AdoUjNTkEfpxoFd9RxJbc",
@@ -30,7 +30,7 @@ export const works_config = [
   },
   {
     slug: "radmaschine_gips",
-    name: "radmaschine gips",
+    name: "radmaschine&nbsp;version \"gips\"",
     thumbnail: "GOPR3912.gif",
     type: "video",
     api_video_code: "vi5j0SnnM2ak4HOaYzY2UZZ6",
@@ -45,7 +45,7 @@ export const works_config = [
   },
   {
     slug: "radmaschine_version_dark_horses",
-    name: "radmaschine version \"dark horses\"",
+    name: "radmaschine&nbsp;version \"dark&nbsp;horses\"",
     thumbnail: "IMG_3131.gif",
     type: "video",
     api_video_code: "vi3dJDzb8Nl87vZ5rZPaAj8d",
@@ -96,7 +96,7 @@ export const works_config = [
     background_color: "#b00000",
     width: 1728,
     height: 1080,
-    comment:"videodatei",
+    comment:"screen capture",
     material: "glasstisch, stuhl, notebook, video",
     dimensions: "20:30min",
   },

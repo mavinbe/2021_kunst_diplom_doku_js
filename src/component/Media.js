@@ -6,7 +6,7 @@ import {useSwipeable} from "react-swipeable";
 import { useHistory } from "react-router-dom";
 import {VideoJsPlayer} from "./api.video/VideoJsPlayer";
 import {contain} from "../helpers/DimensionFitter";
-import {Col, Container, Row} from "react-grid-system";
+import {Col, Container, Row, setConfiguration} from "react-grid-system";
 
 
 export function Media( props )  {
@@ -65,25 +65,58 @@ export function Media( props )  {
 
     let media_content = null;
     if(props.work.type === "video") {
-        media_content = <VideoJsPlayer  style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}  current_work_state={props.current_work_state} windowHeight={props.windowHeight} windowWidth={props.windowWidth} api_video_code={props.work.api_video_code} volume={props.work.volume}/>;
+        media_content = <VideoJsPlayer current_work_state={props.current_work_state} windowHeight={props.windowHeight} windowWidth={props.windowWidth} api_video_code={props.work.api_video_code} volume={props.work.volume}/>;
     }else{
-        media_content = <img  style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}  src={`/media/src/${props.work.src}`} alt="Logo" /> ;
+        media_content = <img  style={{width: '100%'}}  src={`/media/src/${props.work.src}`} alt="Logo" /> ;
 
     }
     return (
-        <div className="media_wrapper">
+        <div>
+            <div className="media_wrapper">
+                <Container style={{maxWidth:`${contain_dimensions.width}px`}}>
+                    <Row justify="between">
+                        <Col md={4} sm={12} xs={12} style={{display:'flex', alignItems:'flex-end'}}>
+                            <div className="meta_year">{props.work.year}</div>
+
+                        </Col>
+                        <Col md={4} sm={12} xs={12} style={{textAlign:'center', fontSize:'140%'}}>
+                            <div className="meta_name" dangerouslySetInnerHTML={{ __html: props.work.name }} ></div>
+                        </Col>
+                        <Col md={4} sm={12} xs={12} style={{display:'flex', alignItems:'flex-end', direction:"rtl"}}>
+                            <div className="meta_comment">{props.work.comment}</div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12}>
+                            <div  className="media_container">
+                                {media_content}
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row>
+
+                        <Col xs={6} style={{textAlign:'left'}}>
+                            <div className="meta_material">{props.work.material}</div>
+                        </Col>
+                        <Col xs={6} style={{textAlign:'right'}}>
+                            <div className="meta_dimensions">{props.work.dimensions}</div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
             <div>
-                <div className="meta_name">{props.work.name}</div>
-                <div className="meta_comment">{props.work.comment}</div>
-                <div  className="media_container" style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}>
-                    {media_content}
-                </div>
-                <div className="meta_year">{props.work.year}</div>
-                <div className="meta_dimensions">{props.work.dimensions}</div>
-                <div className="meta_material">{props.work.material}</div>
+                asddas<br/>
+                asddas<br/>
+                asddas<br/>
+                asddas<br/>
+                asddas<br/>
+                asddas<br/>
+                asddas<br/>
+                asddas<br/>
+                asddas<br/>
             </div>
             <div className="navi_media">
-                <Container>
+                <Container style={{maxWidth:'auto'}}>
                     <Row>
                         <Col className="navi_media_entry" key="navi_left"  md={4} sm={4} xs={4} >
                             <a onClick={handleClickLeft} href="#">

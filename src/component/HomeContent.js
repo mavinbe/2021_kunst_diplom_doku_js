@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'react-grid-system';
 import {works_config} from '../description/works';
 import { setConfiguration } from 'react-grid-system';
 
-setConfiguration({ maxScreenClass: 'sm' });
 
 export class HomeContent extends React.Component {
 
@@ -54,7 +53,7 @@ export class HomeContent extends React.Component {
         return (
             <div>
                 <div className="content_wrapper">
-                    <Container>
+                    <Container style={{maxWidth: '540px'}}>
                         <Row>
                             <Col key="qr"  md={12} sm={12} xs={12} >
                                 <div className="site_title_wrapper">

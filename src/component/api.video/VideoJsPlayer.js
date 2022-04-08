@@ -29,7 +29,7 @@ export function VideoJsPlayer( props )  {
             playToggle: false,
             remainingTimeDisplay: false
         },
-        bigPlayButton: false,
+        bigPlayButton: true,
         inactivityTimeout: 0
     }
 
@@ -43,6 +43,7 @@ export function VideoJsPlayer( props )  {
             playerRef.current = videojs(videoElement, videoJsOptions, () => {
                 console.log("player is ready");
                 const player = playerRef.current;
+
                 //console.log(player.play());
 
             });
