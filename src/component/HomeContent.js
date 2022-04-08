@@ -25,7 +25,7 @@ export class HomeContent extends React.Component {
             let rendered_tiles = current_year_group.map((body, index) =>
                 <Col key={key+index}  md={12} sm={12} xs={12} >
                     <div className="tile">
-                        <span className="title">{body.name}</span>
+                        <span className="title" dangerouslySetInnerHTML={{ __html: body.name }} ></span>
                         <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/gifs/${body.thumbnail}")`}}>&nbsp;</a>
                     </div>
                 </Col>
