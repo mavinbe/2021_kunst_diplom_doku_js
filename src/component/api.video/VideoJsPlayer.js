@@ -88,8 +88,6 @@ export function VideoJsPlayer( props )  {
         },
     });
     return (
-            <div  className="video_container" style={props.style}>
-                <video ref={videoRef} className="video-js"/>
-            </div>
+        <video ref={videoRef} className="video-js"/>
     );
 }

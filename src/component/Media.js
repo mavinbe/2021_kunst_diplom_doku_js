@@ -73,9 +73,14 @@ export function Media( props )  {
     return (
         <div {...swipe_handlers}   className="media_wrapper">
             <div>
-                <span className="meta">{props.work.name}</span>
-                {media_content}
-                <span className="meta">{props.work.year}</span>
+                <div className="meta_name">{props.work.name}</div>
+                <div className="meta_comment">{props.work.comment}</div>
+                <div  className="media_container" style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}>
+                    {media_content}
+                </div>
+                <div className="meta_year">{props.work.year}</div>
+                <div className="meta_dimensions">{props.work.dimensions}</div>
+                <div className="meta_material">{props.work.material}</div>
             </div>
             <div className="navi_media">
                 <Container>

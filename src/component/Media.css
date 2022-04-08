@@ -38,7 +38,22 @@
     padding: 10vh 0;
 
 }
+.media_container {
+    float: left;
+}
+.media_container img{
+    max-width: 100%;
+}
 
-.meta{
+.meta_name, .meta_comment, .meta_year, .meta_material, .meta_dimensions{
     padding: 0 10px;
+    float: left ;
+}
+
+.meta_name {
+    font-size: 100%;
+}
+
+.meta_comment, .meta_material, .meta_dimensions{
+    float: right;
 }
