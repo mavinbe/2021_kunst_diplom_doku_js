@@ -87,7 +87,7 @@ export function Media( props )  {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={12}>
+                        <Col xs={12} style={{paddingLeft:0, paddingRight:0}}>
                             <div  className="media_container">
                                 {media_content}
                             </div>
@@ -102,21 +102,26 @@ export function Media( props )  {
                             <div className="meta_dimensions">{props.work.dimensions}</div>
                         </Col>
                     </Row>
+                    <Row style={{marginTop:'50'}}>
+                        <Col>
+                            <div>
+                                asddas<br/>
+                                asddas<br/>
+                                asddas<br/>
+                                asddas<br/>
+                                asddas<br/>
+                                asddas<br/>
+                                asddas<br/>
+                                asddas<br/>
+                                asddas<br/>
+                            </div>
+                        </Col>
+                    </Row>
                 </Container>
             </div>
-            <div>
-                asddas<br/>
-                asddas<br/>
-                asddas<br/>
-                asddas<br/>
-                asddas<br/>
-                asddas<br/>
-                asddas<br/>
-                asddas<br/>
-                asddas<br/>
-            </div>
+
             <div className="navi_media">
-                <Container style={{maxWidth:'auto'}}>
+                <Container style={{maxWidth:`${contain_dimensions.width}px`}}>
                     <Row>
                         <Col className="navi_media_entry" key="navi_left"  md={4} sm={4} xs={4} >
                             <a onClick={handleClickLeft} href="#">
