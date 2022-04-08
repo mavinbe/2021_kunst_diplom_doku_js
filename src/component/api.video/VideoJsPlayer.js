@@ -11,7 +11,7 @@ export function VideoJsPlayer( props )  {
     const playerRef = React.useRef(null);
 
     const videoJsOptions = {
-        muted: true,
+        muted: false,
         autoplay: true,
         controls: true,
         playsinline: true,
@@ -45,6 +45,10 @@ export function VideoJsPlayer( props )  {
                 //console.log(player.play());
 
             });
+            if(props.volume){
+                playerRef.current.volume(props.volume)
+            }
+
         } else {
             // you can update player here [update player through props]
             // const player = playerRef.current;

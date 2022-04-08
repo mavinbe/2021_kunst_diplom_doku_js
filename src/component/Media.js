@@ -65,7 +65,7 @@ export function Media( props )  {
 
     let media_content = null;
     if(props.work.type === "video") {
-        media_content = <VideoJsPlayer  style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}  current_work_state={props.current_work_state} windowHeight={props.windowHeight} windowWidth={props.windowWidth} api_video_code={props.work.api_video_code} />;
+        media_content = <VideoJsPlayer  style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}  current_work_state={props.current_work_state} windowHeight={props.windowHeight} windowWidth={props.windowWidth} api_video_code={props.work.api_video_code} volume={props.work.volume}/>;
     }else{
         media_content = <img  style={{width: `${contain_dimensions.width}px`, height:  `${contain_dimensions.height}px`}}  src={`/media/src/${props.work.src}`} alt="Logo" /> ;
 
