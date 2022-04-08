@@ -23,13 +23,22 @@ services:
       - ./src:/usr/src/app/my-app/src
       - ./public:/usr/src/app/my-app/public
 #      - /usr/src/app/my-app/node_modules
+    environment:
+      - VIRTUAL_HOST=diplom.doku.mavinbe.xyz
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
 
   proxy_server:
     image: proxy_server
     build:
       context: ./docker/nginx
     ports:
-      - "3001:80"
+      - "80:80"
     networks:
       - frontend
     container_name: proxy_server
