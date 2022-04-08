@@ -38,7 +38,7 @@ services:
     build:
       context: ./docker/nginx
     ports:
-      - "80:80"
+      - "3001:80"
     networks:
       - frontend
     container_name: proxy_server
