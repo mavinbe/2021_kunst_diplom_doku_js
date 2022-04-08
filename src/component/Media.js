@@ -71,7 +71,7 @@ export function Media( props )  {
 
     }
     return (
-        <div {...swipe_handlers}   className="media_wrapper">
+        <div className="media_wrapper">
             <div>
                 <div className="meta_name">{props.work.name}</div>
                 <div className="meta_comment">{props.work.comment}</div>
