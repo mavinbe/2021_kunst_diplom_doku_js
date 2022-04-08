@@ -70,6 +70,43 @@ export function Media( props )  {
         media_content = <img  style={{width: '100%'}}  src={`/media/src/${props.work.src}`} alt="Logo" /> ;
 
     }
+
+    let description = "";
+    if(props.work.description) {
+        description =
+            (<Row style={{marginTop: '100px', marginBottom: '100px'}}>
+                <Col md={3} sm={3} xs={3}>
+                </Col>
+                <Col md={6} sm={6} xs={6}>
+                    <div dangerouslySetInnerHTML={{__html: props.work.description}}>
+                    </div>
+                </Col>
+                <Col md={3} sm={3} xs={3}>
+                </Col>
+
+            </Row>)
+    }
+
+    let additional_media;
+    if(props.work.additional_media) {
+        let additional_media_conent;
+        if(props.work.additional_media.type === "video") {
+            additional_media_conent = <VideoJsPlayer current_work_state={props.current_work_state} windowHeight={props.windowHeight} windowWidth={props.windowWidth} api_video_code={props.work.api_video_code} volume={props.work.volume}/>;
+        }else{
+            additional_media_conent = <img  style={{width: '100%'}}  src={`/media/src/${props.work.additional_media.src}`} alt="Logo" /> ;
+
+        }
+        additional_media = (<Row style={{marginTop: '100px', marginBottom: '100px'}}>
+            <Col md={3} sm={3} xs={3}>
+            </Col>
+            <Col md={6} sm={6} xs={6}>
+                {additional_media_conent}
+            </Col>
+            <Col md={3} sm={3} xs={3}>
+            </Col>
+
+        </Row>)
+    }
     return (
         <div>
             <div className="media_wrapper">
@@ -102,21 +139,9 @@ export function Media( props )  {
                             <div className="meta_dimensions">{props.work.dimensions}</div>
                         </Col>
                     </Row>
-                    <Row style={{marginTop:'50'}}>
-                        <Col>
-                            <div>
-                                asddas<br/>
-                                asddas<br/>
-                                asddas<br/>
-                                asddas<br/>
-                                asddas<br/>
-                                asddas<br/>
-                                asddas<br/>
-                                asddas<br/>
-                                asddas<br/>
-                            </div>
-                        </Col>
-                    </Row>
+                    {description}
+                    {additional_media}
+
                 </Container>
             </div>
 

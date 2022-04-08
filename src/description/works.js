@@ -13,6 +13,7 @@ export const works_config = [
         comment: "bilddatei",
         material: "fine art print",
         dimensions: "100cm x 30cm",
+        description: "Diese Fotografie ist im ersten Semester enstanden. Es ist eine wiederholte Aufnahme der Bildschirmoberfläche. Ich habe mit einer Digitalkamera angefangen so nah ran zu gehen, bzw. so sehr rein zu zoomen, dass einzelne Pixel erkenbar wurde. Das geschossene Foto habe ich dann auf meinen Mac unter Vorschau ge- öffnet und wieder Fotografiert. Die Körnung entsteht teils durch die Pixelmatrix, teils aus Staub auf dem Bildschirm. Ausgestellt wurde die Arbeit hinter einer Glas- scheibe an vier Stellen mit Näglen an der Wand befestigt.",
     },
     {
         slug: "radmaschine_spielen",
@@ -27,6 +28,7 @@ export const works_config = [
         comment: "videodatei",
         material: "2-kanal-performance-video",
         dimensions: "2:16min",
+        description: "Das Leitmotiv und AUsgangspunkt welcher mich zu dieser Arbeit bewogen hat, war das innere Bild eines auf der Stelle stehenden Rades. Es war mir wichtig dies nicht statisch zu lösen, sonder ich wollte eine gewisse Bewegung dabei haben. So war ziemlich schnell klar, dass sich das Rad schnell drehen müsste, damit es sich stabilisert wie beim Fahrrad und so von selbst stehen kann. Die in dem Videostills zu sehene Radmaschine ist der erste Prototype. Das Rad auf der Stelle zu hal- ten war wesentlich schwerer als erwartet. So kann es, dass das Rad nach kurzer Zeit des selbstständigen Stehen sich aufgeschauckelt hat und abgehauen ist. Da kam mir die Idee, den Versuch des Radaufsetzens, damit dieses selbst steht als Performance auf Video aufzunhemen. Das Video ist in extremer Zeitlupe aufge- nommen. Letztendlich ist eine 2-Screen-Installation daraus entstanden."
     },
     {
         slug: "radmaschine_gips",
@@ -57,6 +59,7 @@ export const works_config = [
         material: "installation, motor, stahl, gips, fahrradreifen",
         dimensions: "70cm x 200cm x 50cm",
         volume: 1.0,
+        description: "Diese Arbeit war dann die Weiterentwicklung der ersten Radmaschine. Tatsächlich ist das Rad bis zu einer Stunde selbstständig auf den Gipswalzen gelaufen ohne runter zu fallen. Diese Version habe ich in der \"Dark Horses\"-Ausstellung in der Hochschulgalerie mit verschieden Studierenden der Freien Kunst ausgestellt."
     },
     {
         slug: "post_hopo_1",
@@ -71,6 +74,15 @@ export const works_config = [
         comment: "1min videodatei ausschnitt",
         material: "video projektion",
         dimensions: "18min loop",
+        description: "Ausgelaugt von der Hochschulpolitik, motiviert aber ohne Anhaltspunkt woran ich arbeiten soll frage ich mich wie es weiter geht. Da kommt mir das Bild in den Kopf wie ich einfach ausgelaugt wie ich mich fühle am Boden sitze.",
+        additional_media:
+
+                {
+                    type: "img",
+                    src: "IMG_3597_small.jpg",
+                    comment: "1min videodatei ausschnitt",
+                }
+
     },
     {
         slug: "gleich_gehts_weiter_post_hopo_2",
@@ -85,6 +97,7 @@ export const works_config = [
         comment: "videodatei ",
         material: "video",
         dimensions: "1:22min",
+        description: "Immer noch in den Nachwirkungen der Hochschulpolitik verwickelt probier ich aus ob es hilft mir von Inge mir fest gegen den Kopfhauen zu lassen. <br/>Und tatsächlich hat es ein wenig geholfen, nach den ganzen geisteigen Auseinandersetzunge etwas sinnlich zu tun.",
     },
     {
         slug: "look_what_i_ve_found",
@@ -99,6 +112,7 @@ export const works_config = [
         comment: "screen capture",
         material: "glasstisch, stuhl, notebook, video",
         dimensions: "20:30min",
+        description: "2006 bin ich das erste mal auf die Website malte.de gestossen. Das einzige was auf der Website zu lesen ist, ist \"hightech-spielzeug allein macht nicht glue- cklich!\". Bis jetzt hat sich die Site nicht verändert. Das jemand eine Website so lange betreibt ohne eine erkenbare Absicht damit zu verfolgen, nur eine Geste, ein Gestalungswillen, ein Tag im Internet, hat mich nicht mehr losgelassen. Da kam mir der Gedanke, dass es doch noch mehr \"Lonely Islands\" im Netz geben muss. Die Installation präsentiert die Ergenisse meiner Recherche in Form eines Videos. in welchem nach und nach alle gefunden Websitem im Browser geöffnet werden. ",
     },
     {
         slug: "no_show",
@@ -113,6 +127,9 @@ export const works_config = [
         comment: "screen capture",
         material: "live-video-installation",
         dimensions: "endlos",
+        description: "\"no show\" ist der Versuch per Videomanipulation alle Ausstellungsobjekte der Ausstellung \"Bombax Schmitzii\" zu entfernen und so einen leeren Raum herzustellen, in dem sich Besuchende bewegen und auf Fle-\n" +
+            "cken und Löcher an die Wand und in die Luft zu starren.\n" +
+            "Und so eine surreales bild entsteht.",
     },
     {
         slug: "trek",
