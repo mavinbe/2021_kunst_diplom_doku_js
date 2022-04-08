@@ -29,7 +29,8 @@ export function VideoJsPlayer( props )  {
             playToggle: false,
             remainingTimeDisplay: false
         },
-        bigPlayButton: false
+        bigPlayButton: false,
+        inactivityTimeout: 0
     }
 
     React.useEffect(() => {
