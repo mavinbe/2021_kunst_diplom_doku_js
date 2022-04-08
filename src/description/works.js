@@ -10,6 +10,9 @@ export const works_config = [
     background_color: "#d9dbc2",
     width: 1980,
     height: 594,
+    comment:"bilddatei",
+    material: "fine art print",
+    dimensions: "100cm x 30cm",
   },
   {
     slug: "radmaschine_spielen",
@@ -21,6 +24,9 @@ export const works_config = [
     background_color: "#5701a7",
     width: 640,
     height: 272,
+    comment:"videodatei",
+    material: "2-kanal-performance-video",
+    dimensions: "2:16min",
   },
   {
     slug: "radmaschine_gips",
@@ -32,6 +38,10 @@ export const works_config = [
     background_color: "#B23850",
     width: 1280,
     height: 720,
+    comment:"atelieraufbau",
+    material: "installation, motor, stahl, gips",
+    dimensions: "70cm x 200cm x 50cm",
+    volume: 0.1,
   },
   {
     slug: "radmaschine_version_dark_horses",
@@ -43,6 +53,10 @@ export const works_config = [
     background_color: "#ffb800",
     width: 1920,
     height: 1080,
+    comment:"ausstellungsaufbau",
+    material: "installation, motor, stahl, gips, fahrradreifen",
+    dimensions: "70cm x 200cm x 50cm",
+    volume: 1.0,
   },
   {
     slug: "post_hopo_1",
@@ -54,6 +68,9 @@ export const works_config = [
     background_color: "#00da6c",
     width: 1920,
     height: 1080,
+    comment:"1min videodatei ausschnitt",
+    material: "video projektion",
+    dimensions: "18min loop",
   },
   {
     slug: "gleich_gehts_weiter_post_hopo_2",
@@ -65,6 +82,9 @@ export const works_config = [
     background_color: "#000dff",
     width: 640,
     height: 336,
+    comment:"videodatei ",
+    material: "video",
+    dimensions: "1:22min",
   },
   {
     slug: "look_what_i_ve_found",
@@ -76,6 +96,9 @@ export const works_config = [
     background_color: "#b00000",
     width: 1728,
     height: 1080,
+    comment:"videodatei",
+    material: "glasstisch, stuhl, notebook, video",
+    dimensions: "20:30min",
   },
   {
     slug: "no_show",
@@ -87,6 +110,9 @@ export const works_config = [
     background_color: "#45b561",
     width: 1920,
     height: 1080,
+    comment: "screen capture",
+    material: "live-video-installation",
+    dimensions: "endlos",
   },
   {
     slug: "trek",
@@ -98,6 +124,9 @@ export const works_config = [
     background_color: "#ff6200",
     width: 2880,
     height: 1620,
+    comment: "screen capture",
+    material: "live-video-installation",
+    dimensions: "endlos - 10 min blöcke",
   },
   {
     slug: "four_rooms",
@@ -109,6 +138,9 @@ export const works_config = [
     background_color: "#ff0090",
     width: 1920,
     height: 1444,
+    comment: "screen capture",
+    material: "live-video-installation",
+    dimensions: "endlos",
   }
 ]
 
