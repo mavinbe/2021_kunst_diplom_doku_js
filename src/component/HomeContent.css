@@ -47,6 +47,7 @@
 }
 
 .year {
+    background-color: white;
     text-align: center;
     font-size: 160%;
     padding-top: 5px;
@@ -83,12 +84,11 @@
     text-decoration: none;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
     .tile {
         font-size: 140%;
     }
     .tile-link {
         height: 202px;
-
     }
 }
