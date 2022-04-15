@@ -52,20 +52,6 @@ export class HomeContent extends React.Component {
 
         return (
             <div>
-                <div className="content_wrapper">
-                    <Container style={{maxWidth: '100%', paddingLeft:0, paddingRight:0}}>
-                        <Row>
-                            <Col key="qr"  md={12} sm={12} xs={12} >
-                                <div className="site_title_wrapper">
-                                    <div className="site_title_top">diplom doku</div>
-                                    <img className="qr"  src={`media/img/qr.png`} alt="Logo" />
-                                    <div className="site_title_bottom">malte-levin behrens</div>
-                                </div>
-                            </Col>
-                            {this.year_sections}
-                        </Row>
-                    </Container>
-                </div>
                 <div className="navi_home">
                     <Container style={{maxWidth: '100%', paddingLeft:0, paddingRight:0}}>
                         <Row>
@@ -90,6 +76,20 @@ export class HomeContent extends React.Component {
                                   </nav>
                                   */}
                             </Col>
+                        </Row>
+                    </Container>
+                </div>
+                <div className="content_wrapper">
+                    <Container style={{maxWidth: '100%', paddingLeft:0, paddingRight:0}}>
+                        <Row>
+                            <Col key="qr"  md={12} sm={12} xs={12} >
+                                <div className="site_title_wrapper">
+                                    <div className="site_title_top">diplom doku</div>
+                                    <img className="qr"  src={`media/img/qr.png`} alt="Logo" />
+                                    <div className="site_title_bottom">malte-levin behrens</div>
+                                </div>
+                            </Col>
+                            {this.year_sections}
                         </Row>
                     </Container>
                 </div>
