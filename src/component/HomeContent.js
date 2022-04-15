@@ -53,7 +53,7 @@ export class HomeContent extends React.Component {
         return (
             <div>
                 <div className="content_wrapper">
-                    <Container style={{maxWidth: '540px'}}>
+                    <Container style={{maxWidth: '100%', paddingLeft:0, paddingRight:0}}>
                         <Row>
                             <Col key="qr"  md={12} sm={12} xs={12} >
                                 <div className="site_title_wrapper">
@@ -67,7 +67,7 @@ export class HomeContent extends React.Component {
                     </Container>
                 </div>
                 <div className="navi_home">
-                    <Container>
+                    <Container style={{maxWidth: '100%', paddingLeft:0, paddingRight:0}}>
                         <Row>
                             <Col key="navi_home"  md={12} sm={12} xs={12} >
                                 <div className="navi-toggle">
