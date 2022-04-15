@@ -75,13 +75,10 @@ export function Media( props )  {
     if(props.work.description) {
         description =
             (<Row style={{marginTop: '100px', marginBottom: '100px'}}>
-                <Col md={3} sm={3} xs={3}>
-                </Col>
-                <Col md={6} sm={6} xs={6}>
+
+                <Col md={12} sm={12} xs={12}>
                     <div dangerouslySetInnerHTML={{__html: props.work.description}}>
                     </div>
-                </Col>
-                <Col md={3} sm={3} xs={3}>
                 </Col>
 
             </Row>)
@@ -97,14 +94,9 @@ export function Media( props )  {
 
         }
         additional_media = (<Row style={{marginTop: '100px', marginBottom: '100px'}}>
-            <Col md={3} sm={3} xs={3}>
-            </Col>
-            <Col md={6} sm={6} xs={6}>
+            <Col md={12} sm={12} xs={12}>
                 {additional_media_conent}
             </Col>
-            <Col md={3} sm={3} xs={3}>
-            </Col>
-
         </Row>)
     }
     return (
@@ -146,7 +138,7 @@ export function Media( props )  {
             </div>
 
             <div className="navi_media">
-                <Container style={{maxWidth:`${contain_dimensions.width}px`}}>
+                <Container style={{maxWidth: '100%'}}>
                     <Row>
                         <Col className="navi_media_entry" key="navi_left"  md={4} sm={4} xs={4} >
                             <a onClick={handleClickLeft} href="#">

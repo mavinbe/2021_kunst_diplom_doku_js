@@ -1,3 +1,8 @@
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .navi_media {
     position: fixed;
     padding: 0px;
