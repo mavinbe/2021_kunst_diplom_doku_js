@@ -9,6 +9,36 @@ import {contain} from "../helpers/DimensionFitter";
 import {Col, Container, Row, setConfiguration} from "react-grid-system";
 
 
+function generate_additional_media(props) {
+    let additional_media;
+    if (props.work.additional_media) {
+
+        additional_media = props.work.additional_media.map((item) => {
+            let item_content;
+            if (item.type === "video") {
+                item_content = <VideoJsPlayer current_work_state={props.current_work_state}
+                                      windowHeight={props.windowHeight}
+                                      windowWidth={props.windowWidth}
+                                      api_video_code={props.work.api_video_code}
+                                      volume={props.work.volume}/>
+
+            } else {
+                item_content = <img style={{width: '100%'}} src={`/media/src/${item.src}`}
+                            alt="Logo"/>
+
+            }
+            return (<Row style={{marginTop: '75px', marginBottom: '25px'}}>
+                <Col md={12} sm={12} xs={12}>
+                    {item_content}
+                </Col>
+            </Row>)
+        })
+
+
+    }
+    return additional_media;
+}
+
 export function Media( props )  {
     document.body.style = 'background: '+props.work.background_color+';';
 
@@ -84,21 +114,7 @@ export function Media( props )  {
             </Row>)
     }
 
-    let additional_media;
-    if(props.work.additional_media) {
-        let additional_media_conent;
-        if(props.work.additional_media.type === "video") {
-            additional_media_conent = <VideoJsPlayer current_work_state={props.current_work_state} windowHeight={props.windowHeight} windowWidth={props.windowWidth} api_video_code={props.work.api_video_code} volume={props.work.volume}/>;
-        }else{
-            additional_media_conent = <img  style={{width: '100%'}}  src={`/media/src/${props.work.additional_media.src}`} alt="Logo" /> ;
-
-        }
-        additional_media = (<Row style={{marginTop: '75px', marginBottom: '25px'}}>
-            <Col md={12} sm={12} xs={12}>
-                {additional_media_conent}
-            </Col>
-        </Row>)
-    }
+    let additional_media = generate_additional_media(props);
     return (
         <div>
             <div className="media_wrapper">

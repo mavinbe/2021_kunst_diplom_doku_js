@@ -76,12 +76,12 @@ export const works_config = [
         dimensions: "18min loop",
         description: "Ausgelaugt von der Hochschulpolitik, motiviert aber ohne Anhaltspunkt woran ich arbeiten soll frage ich mich wie es weiter geht.",
         additional_media:
+            [{
+                type: "img",
+                src: "IMG_3597_small.jpg",
+                comment: "1min videodatei ausschnitt",
+            }]
 
-                {
-                    type: "img",
-                    src: "IMG_3597_small.jpg",
-                    comment: "1min videodatei ausschnitt",
-                }
 
     },
     {
@@ -114,11 +114,11 @@ export const works_config = [
         dimensions: "20:30min",
         description: "2006 bin ich das erste mal auf die Website malte.de gestoßen. Das einzige was auf der Website zu lesen ist, war \"hightech-spielzeug allein macht nicht glue- cklich!\". Bis jetzt hat sich die Site nicht verändert. Das jemand eine Website so lange betreibt ohne eine erkenbare Absicht damit zu verfolgen, nur eine Geste, ein Gestalungswillen, ein Tag im Internet, hat mich nicht mehr losgelassen. Da kam mir der Gedanke, dass es doch noch mehr \"Lonely Islands\" im Netz geben muss. Die Installation präsentiert die Ergenisse meiner Recherche in Form eines Videos. in welchem nach und nach alle gefunden Websitem im Browser geöffnet werden. ",
         additional_media:
-            {
+            [{
                 type: "img",
                 src: "1 _MG_9544.jpg",
                 comment: "",
-            }
+            }]
     },
     {
         slug: "no_show",
@@ -134,17 +134,16 @@ export const works_config = [
         material: "live-video-installation",
         dimensions: "endlos",
         additional_media:
-            {
+            [{
                 type: "img",
                 src: "bombax_194a.jpg",
                 comment: "",
             },
-        additional_media_2:
             {
                 type: "img",
                 src: "bombax_057a.jpg",
                 comment: "",
-            }
+            }]
         // description: "\"no show\" ist der Versuch per Videomanipulation alle Ausstellungsobjekte der Ausstellung \"Bombax Schmitzii\" zu entfernen und so einen leeren Raum herzustellen, in dem sich Besuchende bewegen und auf Fle-\n" +
         //     "cken und Löcher an die Wand und in die Luft zu starren.\n" +
         //     "Und so eine surreales bild entsteht.",
