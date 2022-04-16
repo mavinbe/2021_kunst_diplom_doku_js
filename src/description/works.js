@@ -141,7 +141,7 @@ export const works_config = [
             },
             {
                 type: "img",
-                src: "bombax_057a.jpg",
+                src: "bombax_057a_mirrow.jpg",
                 comment: "",
             }],
         //description: "\"no show\" ist der Versuch, per Videomanipulation alle Ausstellungsobjekte der Ausstellung \"Bombax Schmitzii\" zu entfernen und so einen leeren Raum herzustellen, in dem sich Besuchende bewegen und auf Flecken und Löcher an die Wand und in die Luft starren, sodass ein surreales Bild entsteht.",
