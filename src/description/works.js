@@ -66,14 +66,15 @@ export const works_config = [
         name: "HoPo",
         thumbnail: "clodes_due_to_hopo.png",
         year: 2017,
-        background_color: "#ffb800",
-        type: "text",
-
-        comment: "ausstellungsaufbau",
-        material: "installation, motor, stahl, gips, fahrradreifen",
-        dimensions: "70cm x 200cm x 50cm",
+        background_color: "radial-gradient(#e66465, #555555)",
+        background_color: "radial-gradient(#e66465, #555555, #000000)",
+        type: "img",
+        src: "clodes_due_to_hopo.png",
+        //comment: "ausstellungsaufbau",
+        material: "AStA, StuPa, FK1, Senat",
+        dimensions: "2 jahre",
         volume: 1.0,
-        //description: "Diese Arbeit war dann die Weiterentwicklung der ersten Radmaschine. Tatsächlich ist das Rad bis zu einer Stunde selbstständig auf den Gipswalzen gelaufen ohne runterzufallen. Diese Version habe ich in der "Dark Horses"-Ausstellung in der Hochschulgalerie mit verschieden Studierenden der Freien Kunst ausgestellt."
+        description: "Hochschulpolitik 2. Spielzeit für mich. Das HoPo-Jahr beginnt schon turbulent mit der Verkündigung der neuen Hausordnung. Die offensichtlich nicht die neue Präsidentein, Vanesse Ohlraun verfasst hat, sonder ihr bereits ausgearbeitet ,unter leitung des damaligen Vice-Präsident Lange, zur unterschrift vorgelegt wurde. Weiter Versuche nun mit der neunen Hoffnung Ohlraun ins Gespräch zu kommen werden von ihr eisig abgeblockt. Weiterer Frust macht sich breit. Nach dem auto- und austeritären Musterknaben des Ministeriums Lange. Gibt sich Vanessa Ohlraun betont professionell und unnahbar. Die große Bombe platzt dann erneut wieder zum Wintersemester-Beginn. Wir Studierenden sind ausseruns und besetzen im Anschluss an die Eröffmnung der neuen Montagehalle kurzerhand die Blumenstraße um für bessere Studienbedingungen und gegen die schlechte Kommunikation der Hochschulleitung zu Streiken. Noch in der selben Nacht rückt in Vertretung für die erkrankte Vanessa Ohlraun, Nicolas Lange mit eine kleinen Delefgation  von offiziellen an, um uns mit Strafanzeige und Räumung zu drohen. Wir lassen uns davon nicht einschüchtern und weisen in darauf hin, dass seine Drohgebärden eskalativ auf die Situation wirken und er sich lieber auf dich inhaltliche Ebene einlassen solle. Aber da kann ein Nicolas Lange nicht aus seiner Haut. In Die Besetzung dauert einen Monat. einige Strafeanzeigen und einige öffentliche Auseinandersetzungen in der Presse an. welche wir klar nach Punkten gewinnen, da die Hochschulleitung völlig überfordert ist mit der Situation und es nicht schaftt ihr vorgehen in der Öffentlichkeit positiv darzustellen.  Schlussendlich können wir uns nach längerer Verhandlung im November mit Vanessa Ohlraun auf die Bedingungen für die Beendigung der Besetzung einigen. In der Funktion des Pressesprechers der Besetzung war ich fast die gesamte Zeit, mit kurzen unterbrechungen vor Ort. Was dazu geführt hat, dass alles andere unmittelbar zum Stillstand gekommen ist. Für mich war es ein wichtiges Erlebnis, zu sehen wie solidarisch und entschlossen wir studierende agieren können. Meiner Einschätzung nach hat uns die ganze Aktion einiges an Respekt an der Hochschule verschafft. Das man uns nicht einfach als manipulierbar Masse betrachter, sonder als ernst zunehmende Interessengruppe. Nichtsdestotzrotz hat sich schnell wieder eine Normalität eingestellt und es wurde auch weiterhin nicht zum 24/7 Zugang zu den Ateliers zurückgekehrt. Im Wintersemester musste ich mich dann erst mal ordnen und Prioritäten neu setzen. Ich bereue das politische Engagement an der HBK in keinster Weise, bin aber zu dem schluss gekommen, dass es immer was zu tuen gibt, ich Kunst studieren möchte und es noch andere Menschen gibt die weiter oder nach mir, die Hochschule hochschulpolitisch mitgestalten können. So bin ich dann offiziell zum Frühjahr 2018 aus allen Gremien ausgeschieden um mich auf die Kunst zu konzentrieren.w"
     },
     {
         slug: "post_hopo_1",
