@@ -74,7 +74,7 @@ export function Media( props )  {
     let description = "";
     if(props.work.description) {
         description =
-            (<Row style={{marginTop: '100px', marginBottom: '100px'}}>
+            (<Row style={{marginTop: '75px', marginBottom: '25px'}}>
 
                 <Col md={12} sm={12} xs={12}>
                     <div dangerouslySetInnerHTML={{__html: props.work.description}}>
@@ -93,7 +93,7 @@ export function Media( props )  {
             additional_media_conent = <img  style={{width: '100%'}}  src={`/media/src/${props.work.additional_media.src}`} alt="Logo" /> ;
 
         }
-        additional_media = (<Row style={{marginTop: '100px', marginBottom: '100px'}}>
+        additional_media = (<Row style={{marginTop: '75px', marginBottom: '25px'}}>
             <Col md={12} sm={12} xs={12}>
                 {additional_media_conent}
             </Col>
@@ -122,7 +122,7 @@ export function Media( props )  {
                             </div>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row style={{marginBottom: '25px'}}>
 
                         <Col xs={6} style={{textAlign:'left'}}>
                             <div className="meta_material">{props.work.material}</div>
