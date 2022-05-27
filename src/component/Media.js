@@ -55,11 +55,11 @@ export function Media( props )  {
 
     function handleClick(slug) {
         const url = `/works/${slug}`
-        console.log("props.current_work_state.value")
-        console.log(props.current_work_state.value)
+        // console.log("props.current_work_state.value")
+        // console.log(props.current_work_state.value)
         props.current_work_state.set(slug)
         history.push(url);
-        console.log("history.push("+url+")");
+        // console.log("history.push("+url+")");
     }
 
     function handleClickLeft() {
@@ -83,7 +83,6 @@ export function Media( props )  {
     });
 
     function handleKeyDown(e) {
-        console.log(e)
         switch (e.code) {
             case 'ArrowLeft': handleClick(props.work.prev_entry); break;
             case 'ArrowRight': handleClick(props.work.next_entry); break;

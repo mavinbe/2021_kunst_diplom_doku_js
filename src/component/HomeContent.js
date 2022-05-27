@@ -48,8 +48,6 @@ export class HomeContent extends React.Component {
         });
 
 
-        console.log(this.year_sections)
-
     }
 
     componentDidMount() {
@@ -115,7 +113,6 @@ export class HomeContent extends React.Component {
                     </Row>
                 );
             } );
-        console.log(grid_rows)
         return grid_rows
 
     }

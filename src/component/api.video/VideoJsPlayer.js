@@ -41,7 +41,6 @@ export function VideoJsPlayer( props )  {
             if (!videoElement) return;
 
             playerRef.current = videojs(videoElement, videoJsOptions, () => {
-                console.log("player is ready");
                 const player = playerRef.current;
 
                 //console.log(player.play());
