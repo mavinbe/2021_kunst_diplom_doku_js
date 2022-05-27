@@ -79,9 +79,9 @@
 }
 
 .year {
-    background-color: white;
+    /*background-color: white;*/
     text-align: center;
-    font-size: 160%;
+    font-size: 110%;
     padding-top: 5px;
     margin-top: 20px;
     line-height: 70%;
@@ -93,9 +93,11 @@
 }
 
 .tile {
+    position: relative;
     background-color: white;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 43px;
+    /*padding-top: 5px;*/
     padding-bottom: 40px
 }
 

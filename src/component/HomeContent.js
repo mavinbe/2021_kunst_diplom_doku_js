@@ -27,16 +27,26 @@ export class HomeContent extends React.Component {
         this.year_sections = Object.keys(works_config_grouped_by_years).map(function(key) {
             let current_year_group = works_config_grouped_by_years[key];
 
-            let rendered_tiles = current_year_group.map((body, index) =>
-                <Col key={key+index}  md={12} sm={12} xs={12} >
-                    <div className="tile">
-                        <span className="title" dangerouslySetInnerHTML={{ __html: body.name }} ></span>
-                        <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
-                    </div>
-                </Col>
-            );
-            // <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
-            return [(
+            function get_rendered_tiles(year_block) {
+                const tiles = current_year_group.map((body, index) => {
+                    const year_block_to_show = index===0 ? (
+                        <div style={{position:'absolute', top:0, width:'100%'}}>
+                            {year_block}
+                        </div>
+                    ) : null;
+                    return (<Col key={key + index} md={12} sm={12} xs={12}>
+                        <div className="tile">
+                            <span className="title" dangerouslySetInnerHTML={{__html: body.name}}></span>
+                            <a href={`/works/${body.slug}`} className="tile-link"
+                               style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
+                            {year_block_to_show}
+                        </div>
+                    </Col>
+                    )
+                });
+                return tiles
+            }
+            const year_block = (
                 <Col key={key}  md={12} sm={12} xs={12} >
                     <div className="year">
                         <span className="year_span">
@@ -44,7 +54,10 @@ export class HomeContent extends React.Component {
                         </span>
                     </div>
                 </Col>
-            ),rendered_tiles] ;
+            );
+            const rendered_tiles = get_rendered_tiles(year_block);
+            // <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
+            return [rendered_tiles] ;
         });
 
 
