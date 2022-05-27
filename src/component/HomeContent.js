@@ -47,13 +47,11 @@ export class HomeContent extends React.Component {
                 return tiles
             }
             const year_block = (
-                <Col key={key}  md={12} sm={12} xs={12} >
-                    <div className="year">
-                        <span className="year_span">
-                            {key}
-                        </span>
-                    </div>
-                </Col>
+                <div className="year">
+                    <span className="year_span">
+                        {key}
+                    </span>
+                </div>
             );
             const rendered_tiles = get_rendered_tiles(year_block);
             // <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
