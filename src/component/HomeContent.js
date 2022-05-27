@@ -26,8 +26,8 @@ export class HomeContent extends React.Component {
                 <Col key={key+index}  md={12} sm={12} xs={12} >
                     <div className="tile">
                         <span className="title" dangerouslySetInnerHTML={{ __html: body.name }} ></span>
-                        <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
-                        </div>
+                        <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/gifs/${body.thumbnail}")`}}>&nbsp;</a>
+                    </div>
                 </Col>
             );
             // <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
