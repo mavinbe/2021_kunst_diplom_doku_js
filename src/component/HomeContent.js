@@ -10,6 +10,11 @@ export class HomeContent extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            height: 0,
+            part_height: 0
+        }
+
         // groups entries by year
         let works_config_grouped_by_years = works_config.reduce(function (accu, current) {
             if(!(current.year in accu)){
@@ -26,7 +31,7 @@ export class HomeContent extends React.Component {
                 <Col key={key+index}  md={12} sm={12} xs={12} >
                     <div className="tile">
                         <span className="title" dangerouslySetInnerHTML={{ __html: body.name }} ></span>
-                        <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/gifs/${body.thumbnail}")`}}>&nbsp;</a>
+                        <a href={`/works/${body.slug}`} className="tile-link" style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
                     </div>
                 </Col>
             );
@@ -47,12 +52,21 @@ export class HomeContent extends React.Component {
 
     }
 
+    componentDidMount() {
+        const height = this.divElement.clientHeight;
+        const part_height = height / 12;
+        this.setState({ height });
+        this.setState({ part_height });
+        console.log(height)
+    }
+
     render() {
 
 
         return (
-            <div>
-                <div className="content_wrapper">
+            <div style={{position: 'relative'}}>
+
+                <div className="content_wrapper"  ref={ (divElement) => { this.divElement = divElement } }>
                     <Container style={{maxWidth: '768px', paddingLeft:0, paddingRight:0}}>
                         <Row>
                             <Col key="qr"  md={12} sm={12} xs={12} >
@@ -90,6 +104,46 @@ export class HomeContent extends React.Component {
                                   </nav>
                                   */}
                             </Col>
+                        </Row>
+                    </Container>
+                </div>
+                <div className="overlay"  style={{height: this.state.height}} ref={ (naviElement) => { this.naviElement = naviElement } }>
+                    <Container>
+                        <Row >
+                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
+                        </Row>
+                        <Row>
+                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                        </Row>
+                        <Row >
+                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
+                        </Row>
+                        <Row>
+                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                        </Row>
+                        <Row >
+                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
+                        </Row>
+                        <Row>
+                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                        </Row>
+                        <Row >
+                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
+                        </Row>
+                        <Row>
+                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                        </Row>
+                        <Row >
+                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
+                        </Row>
+                        <Row>
+                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                        </Row>
+                        <Row >
+                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
+                        </Row>
+                        <Row>
+                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
                         </Row>
                     </Container>
                 </div>
