@@ -82,14 +82,19 @@
     /*background-color: white;*/
     text-align: center;
     font-size: 110%;
-    padding-top: 5px;
-    margin-top: 20px;
+    border-top: solid black 20px;
     line-height: 70%;
 }
 
 .year_span {
+    display: inline-block;
+    height: 0.7em;
     color: white;
     background-color: black;
+}
+
+.year_end {
+    border-bottom: solid black 20px;
 }
 
 .tile {

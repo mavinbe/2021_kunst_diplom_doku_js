@@ -28,10 +28,17 @@ export class HomeContent extends React.Component {
             let current_year_group = works_config_grouped_by_years[key];
 
             function get_rendered_tiles(year_block) {
+                const count = current_year_group.length
                 const tiles = current_year_group.map((body, index) => {
                     const year_block_to_show = index===0 ? (
                         <div style={{position:'absolute', top:0, width:'100%'}}>
                             {year_block}
+                        </div>
+                    ) : null;
+                    const closing_element = count-1===index ? (
+                        <div style={{position:'absolute', bottom:0, width:'100%'}}>
+                            <div className="year_end">
+                            </div>
                         </div>
                     ) : null;
                     return (<Col key={key + index} md={12} sm={12} xs={12}>
@@ -40,6 +47,7 @@ export class HomeContent extends React.Component {
                             <a href={`/works/${body.slug}`} className="tile-link"
                                style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
                             {year_block_to_show}
+                            {closing_element}
                         </div>
                     </Col>
                     )
