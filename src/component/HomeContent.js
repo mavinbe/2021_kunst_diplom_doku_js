@@ -106,7 +106,7 @@ export class HomeContent extends React.Component {
         const grid_rows = Array.apply(0, Array(12))
             .map((element, index) => {
                 return (
-                    <Row>
+                    <Row key={"page_list_"+index}>
                         <div className={`overlay_row overlay_row_${index%2===0?"even":"odd"}`} style={{height: this.state.part_height - 1}}>
                             <div style={{marginTop:-(this.state.part_height * index)}}>
                                 {content}
