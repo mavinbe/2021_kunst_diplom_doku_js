@@ -61,35 +61,25 @@ export class HomeContent extends React.Component {
     }
 
     render(){
-        return this.hole_page()
-    }
-
-    hole_page() {
         return (
             <div style={{position: 'relative'}}>
+                {this.hole_page()}
+                {this.render_navi()}
+                {/*{this.render_in_grid(this.hole_page())}*/}
+            </div>
+        );
+    }
 
-                <div className="content_wrapper"  ref={ (divElement) => { this.divElement = divElement } }>
-                    <Container style={{maxWidth: '768px', paddingLeft:0, paddingRight:0}}>
-                        <Row>
-                            <Col key="qr"  md={12} sm={12} xs={12} >
-                                <div className="site_title_wrapper">
-                                    <div className="site_title_top">diplom doku</div>
-                                    <img className="qr"  src={`media/img/qr.png`} alt="Logo" />
-                                    <div className="site_title_bottom">malte-levin behrens</div>
-                                </div>
-                            </Col>
-                            {this.year_sections}
-                        </Row>
-                    </Container>
-                </div>
-                <div className="navi_home">
-                    <Container style={{maxWidth: '100%', paddingLeft:0, paddingRight:0}}>
-                        <Row>
-                            <Col key="navi_home"  md={12} sm={12} xs={12} >
-                                <div className="navi-toggle">
-                                    <div> lII</div>
-                                </div>
-                                {/*
+    render_navi () {
+        return (
+            <div className="navi_home">
+                <Container style={{maxWidth: '100%', paddingLeft:0, paddingRight:0}}>
+                    <Row>
+                        <Col key="navi_home"  md={12} sm={12} xs={12} >
+                            <div className="navi-toggle">
+                                <div> lII</div>
+                            </div>
+                            {/*
                                   <nav>
                                     <ul>
                                       <li>
@@ -105,51 +95,76 @@ export class HomeContent extends React.Component {
                                     </ul>
                                   </nav>
                                   */}
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
-                <div className="overlay"  style={{height: this.state.height}} ref={ (naviElement) => { this.naviElement = naviElement } }>
-                    <Container>
-                        <Row >
-                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
-                        </Row>
-                        <Row>
-                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                        </Row>
-                        <Row >
-                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
-                        </Row>
-                        <Row>
-                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                        </Row>
-                        <Row >
-                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
-                        </Row>
-                        <Row>
-                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                        </Row>
-                        <Row >
-                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
-                        </Row>
-                        <Row>
-                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                        </Row>
-                        <Row >
-                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
-                        </Row>
-                        <Row>
-                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                        </Row>
-                        <Row >
-                            <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
-                        </Row>
-                        <Row>
-                            <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                        </Row>
-                    </Container>
-                </div>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
+        );
+    }
+
+    render_in_grid(content) {
+        return (
+            <div className="overlay"  style={{height: this.state.height}} ref={ (naviElement) => { this.naviElement = naviElement } }>
+                <Container>
+                    <Row >
+                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>
+                            {content}
+                        </div>
+                    </Row>
+                    <Row>
+                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                    </Row>
+                    <Row >
+                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
+                    </Row>
+                    <Row>
+                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                    </Row>
+                    <Row >
+                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
+                    </Row>
+                    <Row>
+                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                    </Row>
+                    <Row >
+                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
+                    </Row>
+                    <Row>
+                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                    </Row>
+                    <Row >
+                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
+                    </Row>
+                    <Row>
+                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                    </Row>
+                    <Row >
+                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
+                    </Row>
+                    <Row>
+                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
+                    </Row>
+                </Container>
+            </div>
+        );
+    }
+
+    hole_page() {
+        return (
+                <div className="content_wrapper"  ref={ (divElement) => { this.divElement = divElement } }>
+                    <Container style={{maxWidth: '768px', paddingLeft:0, paddingRight:0}}>
+                        <Row>
+                            <Col key="qr"  md={12} sm={12} xs={12} >
+                                <div className="site_title_wrapper">
+                                    <div className="site_title_top">diplom doku</div>
+                                    <img className="qr"  src={`media/img/qr.png`} alt="Logo" />
+                                    <div className="site_title_bottom">malte-levin behrens</div>
+                                </div>
+                            </Col>
+                            {this.year_sections}
+                        </Row>
+                    </Container>
+                </div>
         );
     }
 }
