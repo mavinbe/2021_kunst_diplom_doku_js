@@ -41,8 +41,21 @@ export class HomeContent extends React.Component {
                             </div>
                         </div>
                     ) : null;
+                    let pos = null
+                    if(index===0 && count-1!==index) {
+                        pos = 'high'
+                    }else if(index!==0 && count-1===index){
+                        pos = 'low'
+                    }else if(index===0 && count-1===index){
+                        pos = 'crushed'
+                    }else{
+                        pos = 'mid'
+                    }
+
+                    console.log([index,count])
+                    console.log(pos)
                     return (<Col key={key + index} md={12} sm={12} xs={12}>
-                        <div className="tile">
+                        <div className={`tile tile_${pos}`}>
                             <span className="title" dangerouslySetInnerHTML={{__html: body.name}}></span>
                             <a href={`/works/${body.slug}`} className="tile-link"
                                style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
@@ -71,7 +84,7 @@ export class HomeContent extends React.Component {
 
     componentDidMount() {
         const height = this.divElement.clientHeight;
-        const part_height = height / 12;
+        const part_height = height / 11.991;
         this.setState({ height });
         this.setState({ part_height });
         console.log(height)
