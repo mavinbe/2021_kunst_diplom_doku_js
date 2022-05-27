@@ -54,10 +54,10 @@
 
 .site_title_wrapper {
     text-align: center;
-    border-top: solid black 40px;
-    border-bottom: solid black 20px;
-    padding-top: 10px;
-    padding-bottom: 4px;
+    border-top: solid black 37px;
+    border-bottom: solid black 17px;
+    padding-top: 13px;
+    padding-bottom: 7px;
     /*padding-top: 37px;*/
     /*padding-bottom: 15px;*/
     background-color: white;
@@ -82,19 +82,19 @@
     /*background-color: white;*/
     text-align: center;
     font-size: 110%;
-    border-top: solid black 20px;
-    line-height: 70%;
+    border-top: solid black 17px;
+    line-height: 55%;
 }
 
 .year_span {
     display: inline-block;
-    height: 0.7em;
+    height: 0.55em;
     color: white;
     background-color: black;
 }
 
 .year_end {
-    border-bottom: solid black 20px;
+    border-bottom: solid black 17px;
 }
 
 .tile {
