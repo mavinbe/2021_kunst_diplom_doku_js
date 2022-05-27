@@ -63,9 +63,9 @@ export class HomeContent extends React.Component {
     render(){
         return (
             <div style={{position: 'relative'}}>
-                {this.hole_page()}
+                {/*{this.hole_page()}*/}
+                {this.render_in_grid(this.hole_page())}
                 {this.render_navi()}
-                {/*{this.render_in_grid(this.hole_page())}*/}
             </div>
         );
     }
@@ -103,50 +103,21 @@ export class HomeContent extends React.Component {
     }
 
     render_in_grid(content) {
-        return (
-            <div className="overlay"  style={{height: this.state.height}} ref={ (naviElement) => { this.naviElement = naviElement } }>
-                <Container>
-                    <Row >
-                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>
-                            {content}
+        const grid_rows = Array.apply(0, Array(12))
+            .map((element, index) => {
+                return (
+                    <Row>
+                        <div className={`overlay_row overlay_row_${index%2===0?"even":"odd"}`} style={{height: this.state.part_height - 1}}>
+                            <div style={{marginTop:-(this.state.part_height * index)}}>
+                                {content}
+                            </div>
                         </div>
                     </Row>
-                    <Row>
-                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                    </Row>
-                    <Row >
-                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
-                    </Row>
-                    <Row>
-                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                    </Row>
-                    <Row >
-                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
-                    </Row>
-                    <Row>
-                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                    </Row>
-                    <Row >
-                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
-                    </Row>
-                    <Row>
-                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                    </Row>
-                    <Row >
-                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>asd</div>
-                    </Row>
-                    <Row>
-                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                    </Row>
-                    <Row >
-                        <div className="overlay_row overlay_row_even" style={{height: this.state.part_height - 1}}>ddddds</div>
-                    </Row>
-                    <Row>
-                        <div className="overlay_row overlay_row_odd" style={{height: this.state.part_height - 1}}>dsa</div>
-                    </Row>
-                </Container>
-            </div>
-        );
+                );
+            } );
+        console.log(grid_rows)
+        return grid_rows
+
     }
 
     hole_page() {
