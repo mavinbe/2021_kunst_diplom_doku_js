@@ -60,9 +60,11 @@ export class HomeContent extends React.Component {
         console.log(height)
     }
 
-    render() {
+    render(){
+        return this.hole_page()
+    }
 
-
+    hole_page() {
         return (
             <div style={{position: 'relative'}}>
 
