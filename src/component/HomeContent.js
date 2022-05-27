@@ -57,7 +57,7 @@ export class HomeContent extends React.Component {
                         <div className={`tile tile_${pos}`}>
                             <span className="title" dangerouslySetInnerHTML={{__html: body.name}}></span>
                             <a href={`/works/${body.slug}`} className="tile-link"
-                               style={{backgroundImage: `url("/media/tumbnail_still/${body.thumbnail_still}")`}}>&nbsp;</a>
+                               style={{backgroundImage: `url("/media/gifs/${body.thumbnail}")`}}>&nbsp;</a>
                             {year_block_to_show}
                             {closing_element}
                         </div>
@@ -98,8 +98,8 @@ export class HomeContent extends React.Component {
     render(){
         return (
             <div style={{position: 'relative'}}>
-                {/*{this.hole_page()}*/}
-                {this.render_in_grid(this.hole_page())}
+                {this.hole_page()}
+                {/*{this.render_in_grid(this.hole_page())}*/}
                 {this.render_navi()}
             </div>
         );
