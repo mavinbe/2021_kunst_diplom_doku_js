@@ -84,7 +84,7 @@ export class HomeContent extends React.Component {
 
     componentDidMount() {
         const height = this.divElement.clientHeight;
-        const part_height = height / 11.991;
+        const part_height = height / 12;
         this.setState({ height });
         this.setState({ part_height });
         console.log(height)
