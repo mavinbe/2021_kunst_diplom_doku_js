@@ -9,7 +9,6 @@ export class HomeContent extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             height: 0,
             part_height: 0
@@ -81,13 +80,19 @@ export class HomeContent extends React.Component {
 
 
     }
-
-    componentDidMount() {
+    setHeightState() {
         const height = this.divElement.clientHeight;
         const part_height = height / 12;
-        this.setState({ height });
-        this.setState({ part_height });
+        this.setState({height});
+        this.setState({part_height});
         console.log(height)
+    }
+    componentDidMount() {
+        this.setHeightState();
+    }
+
+    handleClick = () => {
+        this.setHeightState();
     }
 
     render(){
@@ -151,7 +156,7 @@ export class HomeContent extends React.Component {
 
     hole_page() {
         return (
-                <div className="content_wrapper"  ref={ (divElement) => { this.divElement = divElement } }>
+                <div className="content_wrapper" onClick={this.handleClick}  ref={ (divElement) => { this.divElement = divElement } }>
                     <Container style={{maxWidth: '768px', paddingLeft:0, paddingRight:0}}>
                         <Row>
                             <Col key="qr"  md={12} sm={12} xs={12} >
