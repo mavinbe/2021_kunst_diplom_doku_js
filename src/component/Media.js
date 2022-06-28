@@ -119,15 +119,9 @@ export function Media( props )  {
             <div className="media_wrapper">
                 <Container style={{maxWidth:`${contain_dimensions.width}px`}}>
                     <Row justify="between">
-                        <Col md={4} sm={12} xs={12} style={{display:'flex', alignItems:'flex-end'}}>
-                            <div className="meta_year">{props.work.year}</div>
 
-                        </Col>
-                        <Col md={4} sm={12} xs={12} style={{textAlign:'center', fontSize:'140%'}}>
+                        <Col md={12} sm={12} xs={12} style={{textAlign:'center', fontSize:'140%'}}>
                             <div className="meta_name" dangerouslySetInnerHTML={{ __html: props.work.name }} ></div>
-                        </Col>
-                        <Col md={4} sm={12} xs={12} style={{display:'flex', alignItems:'flex-end', direction:"rtl"}}>
-                            <div className="meta_comment">{props.work.comment}</div>
                         </Col>
                     </Row>
                     <Row>
@@ -139,12 +133,19 @@ export function Media( props )  {
                     </Row>
                     <Row style={{marginBottom: '25px'}}>
 
-                        <Col xs={6} style={{textAlign:'left'}}>
-                            <div className="meta_material">{props.work.material}</div>
-                        </Col>
-                        <Col xs={6} style={{textAlign:'right'}}>
+                        <Col xs={7} style={{textAlign:'left'}}>
+                            <div className="meta_year">{props.work.year}</div>
+
                             <div className="meta_dimensions">{props.work.dimensions}</div>
+                            <div className="meta_material">{props.work.material}</div>
+
                         </Col>
+
+                        <Col xs={5} style={{textAlign:'right'}}>
+                            <div className="meta_comment">{props.work.comment}</div>
+                        </Col>
+
+
                     </Row>
                     {description}
                     {additional_media}
