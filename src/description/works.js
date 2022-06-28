@@ -71,7 +71,6 @@ export const works_config = [
         thumbnail: "clodes_due_to_hopo.png",
         thumbnail_still: "clodes_due_to_hopo.png",
         year: 2017,
-        background_color: "radial-gradient(#e66465, #555555)",
         background_color: "radial-gradient(#e66465, #555555, #000000)",
         type: "img",
         src: "clodes_due_to_hopo.png",
