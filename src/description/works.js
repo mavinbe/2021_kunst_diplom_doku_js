@@ -14,7 +14,7 @@ export const works_config = [
         comment: "bilddatei",
         material: "fine art print",
         dimensions: "100cm x 30cm",
-        description: "Diese Fotografie ist im ersten Semester entstanden. Es ist eine wiederholte Aufnahme der Bildschirmoberfläche. Ich habe mit einer Digitalkamera angefangen so nah ran zu gehen, bzw. so sehr rein zu zoomen, dass einzelne Pixel erkennbar wurden. Das geschossene Foto habe ich dann auf meinen Mac unter Vorschau geöffnet und wieder fotografiert. Die Körnung entsteht teils durch die Pixelmatrix, teils aus Staub auf dem Bildschirm. Ausgestellt wurde die Arbeit hinter einer Glasscheibe an vier Stellen mit Nägeln an der Wand befestigt.",
+        description: "Diese Fotografie ist im ersten Semester entstanden. Es ist eine wiederholte Aufnahme der Bildschirmoberfläche. Ich habe mit einer Digitalkamera angefangen so nah ran zu gehen, bzw. so sehr rein zu zoomen, dass einzelne Pixel erkennbar wurden. Das geschossene Foto habe ich dann auf meinen Mac unter Vorschau geöffnet und wieder fotografiert. Die Körnung entsteht teils durch die Pixelmatrix, teils aus Staub auf dem Bildschirm.",
     },
     {
         slug: "radmaschine_spielen",
@@ -67,7 +67,7 @@ export const works_config = [
     },
     {
         slug: "hopo",
-        name: "HoPo",
+        name: "SerienKiller HoPo",
         thumbnail: "clodes_due_to_hopo.png",
         thumbnail_still: "clodes_due_to_hopo.png",
         year: 2017,
@@ -78,11 +78,11 @@ export const works_config = [
         material: "AStA, StuPa, FK1, Senat",
         dimensions: "2 jahre",
         volume: 1.0,
-        description: "Hochschulpolitik 2. Spielzeit für mich. Das HoPo-Jahr beginnt schon turbulent mit der Verkündigung der neuen Hausordnung. Die offensichtlich nicht die neue Präsidentein, Vanesse Ohlraun verfasst hat, sonder ihr bereits ausgearbeitet ,unter leitung des damaligen Vice-Präsident Lange, zur unterschrift vorgelegt wurde. Weiter Versuche nun mit der neunen Hoffnung Ohlraun ins Gespräch zu kommen werden von ihr eisig abgeblockt. Weiterer Frust macht sich breit. Nach dem auto- und austeritären Musterknaben des Ministeriums Lange. Gibt sich Vanessa Ohlraun betont professionell und unnahbar. Die große Bombe platzt dann erneut wieder zum Wintersemester-Beginn. Wir Studierenden sind ausseruns und besetzen im Anschluss an die Eröffmnung der neuen Montagehalle kurzerhand die Blumenstraße um für bessere Studienbedingungen und gegen die schlechte Kommunikation der Hochschulleitung zu Streiken. Noch in der selben Nacht rückt in Vertretung für die erkrankte Vanessa Ohlraun, Nicolas Lange mit eine kleinen Delefgation  von offiziellen an, um uns mit Strafanzeige und Räumung zu drohen. Wir lassen uns davon nicht einschüchtern und weisen in darauf hin, dass seine Drohgebärden eskalativ auf die Situation wirken und er sich lieber auf dich inhaltliche Ebene einlassen solle. Aber da kann ein Nicolas Lange nicht aus seiner Haut. In Die Besetzung dauert einen Monat. einige Strafeanzeigen und einige öffentliche Auseinandersetzungen in der Presse an. welche wir klar nach Punkten gewinnen, da die Hochschulleitung völlig überfordert ist mit der Situation und es nicht schaftt ihr vorgehen in der Öffentlichkeit positiv darzustellen.  Schlussendlich können wir uns nach längerer Verhandlung im November mit Vanessa Ohlraun auf die Bedingungen für die Beendigung der Besetzung einigen. In der Funktion des Pressesprechers der Besetzung war ich fast die gesamte Zeit, mit kurzen unterbrechungen vor Ort. Was dazu geführt hat, dass alles andere unmittelbar zum Stillstand gekommen ist. Für mich war es ein wichtiges Erlebnis, zu sehen wie solidarisch und entschlossen wir studierende agieren können. Meiner Einschätzung nach hat uns die ganze Aktion einiges an Respekt an der Hochschule verschafft. Das man uns nicht einfach als manipulierbar Masse betrachter, sonder als ernst zunehmende Interessengruppe. Nichtsdestotzrotz hat sich schnell wieder eine Normalität eingestellt und es wurde auch weiterhin nicht zum 24/7 Zugang zu den Ateliers zurückgekehrt. Im Wintersemester musste ich mich dann erst mal ordnen und Prioritäten neu setzen. Ich bereue das politische Engagement an der HBK in keinster Weise, bin aber zu dem schluss gekommen, dass es immer was zu tuen gibt, ich Kunst studieren möchte und es noch andere Menschen gibt die weiter oder nach mir, die Hochschule hochschulpolitisch mitgestalten können. So bin ich dann offiziell zum Frühjahr 2018 aus allen Gremien ausgeschieden um mich auf die Kunst zu konzentrieren.w"
+        description: "Serienkiller HoPo. <br>Seine Opfer, Zeit, Lebenssaft, Freude und gute Absichten. <br>Hab ich was erreicht? vielleicht Nicht. <br>Hab ich was gelernt? eine Menge. <br>Würde ich es wieder tuen? kann sein. <br>Hat die Hochschule sich selbst verdient? sicher. <br>ICH BIN RAUS"
     },
     {
         slug: "post_hopo_1",
-        name: "post-hopo 1",
+        name: "hopo sucked me out",
         thumbnail: "Starren Dummy.gif",
         thumbnail_still: "Starren Dummy_still.jpg",
         year: 2018,
@@ -94,7 +94,7 @@ export const works_config = [
         comment: "1min videodatei ausschnitt",
         material: "video projektion",
         dimensions: "18min loop",
-        description: "Ausgelaugt von der Hochschulpolitik, motiviert aber ohne Anhaltspunkt, woran ich arbeiten soll, frage ich mich, wie es weitergeht. Da kommt mir das Bild in den Kopf, wie ich einfach ausgelaugt, wie ich mich fühle, am Boden sitze.",
+        description: "Ausgelaugt von der Hochschulpolitik, motiviert aber ohne Anhaltspunkt, woran ich arbeiten soll, frage ich mich wie es weitergeht.",
         additional_media:
             [{
                 type: "img",
@@ -106,7 +106,7 @@ export const works_config = [
     },
     {
         slug: "gleich_gehts_weiter_post_hopo_2",
-        name: "gleich gehts weiter - post-hopo 2",
+        name: "hopo dann frischmachen",
         thumbnail: "Follow_G_small.gif",
         thumbnail_still: "Follow_G_small_still.jpg",
         year: 2018,
@@ -118,7 +118,7 @@ export const works_config = [
         comment: "videodatei ",
         material: "video",
         dimensions: "1:22min",
-        description: "Immer noch in den Nachwirkungen der Hochschulpolitik verwickelt probier ich aus, ob es hilft, mir von Inge fest gegen den Kopfhauen zu lassen. Und tatsächlich hat es ein wenig geholfen, nach den ganzen geistigen Auseinandersetzungen etwas sinnlich zu tun.",
+        description: "Immer noch in den Nachwirkungen der Hochschulpolitik verwickelt probier ich aus, ob es hilft, mir von Inge fest gegen den Kopfhauen zu lassen. <br>IST EIN ANFANG",
     },
     {
         slug: "look_what_i_ve_found",
@@ -134,7 +134,7 @@ export const works_config = [
         comment: "screen capture",
         material: "glasstisch, stuhl, notebook, video",
         dimensions: "20:30min",
-        description: "2006 bin ich das erste mal auf die Website malte.de gestoßen. Das Einzige was auf der Website zu lesen ist, ist \"hightech-spielzeug allein macht nicht gluecklich!\". Bis jetzt hat sich die Site nicht verändert. Dass jemand eine Website so lange betreibt, ohne eine erkennbare Absicht damit zu verfolgen, nur eine Geste, ein Gestaltungswillen, ein Tag im Internet, hat mich nicht mehr losgelassen. Da kam mir der Gedanke, dass es doch noch mehr \"Lonely Islands\" im Netz geben muss. Die Installation präsentiert die Ergebnisse meiner Recherche in Form eines Videos, in welchem nach und nach alle gefunden Websites im Browser geöffnet werden.",
+        // description: "\"hightech-spielzeug allein macht nicht gluecklich!\" und andere sexy leichen im Web",
         additional_media:
             [{
                 type: "img",
