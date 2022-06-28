@@ -5,3 +5,31 @@
 .video-js .vjs-slider {
     background-color: transparent
 }
+
+
+.video-js .vjs-big-play-button{
+    margin-top: -0.8em;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.5em;
+
+
+    background-position-x: 24px;
+    background-position-y: 5px;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-image: url('../../icon/arrow_right.png');
+
+    border: none;
+    background-color: black;
+}
+
+.video-js:hover .vjs-big-play-button, .video-js .vjs-big-play-button:focus{
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    background-color: transparent;
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder {
+    display: none;
+}
