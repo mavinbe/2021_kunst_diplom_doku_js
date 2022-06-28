@@ -14,10 +14,6 @@ services:
     build:
       context: ./
       dockerfile: ./docker/react/Dockerfile
-    ports:
-      - "80:3000"
-    networks:
-      - frontend
     container_name: kunst_diplom_doku_js
     volumes:
       - ./src:/usr/src/app/my-app/src
@@ -33,15 +29,3 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
 
-  proxy_server:
-    image: proxy_server
-    build:
-      context: ./docker/nginx
-    ports:
-      - "3001:80"
-    networks:
-      - frontend
-    container_name: proxy_server
-
-networks:
-  frontend:
